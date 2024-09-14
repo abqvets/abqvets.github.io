@@ -1,5 +1,3 @@
-# abqvets.github.io
-public site for veteran resources
 THE (UNOFFICIAL) MASTER LIST\
 OF 
 # **VETERAN RESOURCES**
