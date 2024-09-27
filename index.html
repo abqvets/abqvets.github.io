@@ -12,7 +12,10 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
+    
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -45,14 +48,51 @@
         </div>
         </p>
         </p>
-        <div class="container text-center">
-            <p class="h8 text-light blockquote">Just click a category to view benefits :)</p>
-            <button type="button" class="btn btn-danger class" data-bs-toggle="modal" data-bs-target="#rrtpResident"><span><strong>RRTP Resident? Click Here</strong></span></button>
-            <p> </p>
-        </div>
+        <div class="container">
+    <p class="h8 text-light blockquote text-center">Just click a category to view benefits :)</p>
+    <div class="d-grid gap-2 d-md-block text-center">
+        <a href="tel:988">
+        <button class="btn btn-warning" type="button">
+            <i class="bi-heart-pulse-fill" style="font-size: 1.5rem; color: rgb(252, 10, 10);"> Crisis Dial 988 Option 1</i>
+            <!-- <span class="fs-5">Crisis</span>
+            <span class="fs-5">Dial 988 Option 1</span> -->
+        </button>
+        </a>
+        <a href="https://www.va.gov/new-mexico-health-care/locations/raymond-g-murphy-department-of-veterans-affairs-medical-center/" target="_blank">
+        <button class="btn btn-danger" type="button">
+            <i class="bi-hospital-fill" style="font-size: 1.5rem; color: white;"></i>
+            <span class="fs-5">Official NM VA</span> 
+        </button>
+        </a>    
+        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#rrtpResidentModal">
+            <i class="bi-house-fill" style="font-size: 1.5rem; color: white;"></i>
+            <span class="fs-5">RRTP Resident</span> 
+        </button>
+       
+    </div>
+    <p> </p>
+
 
         <!-- Accordion Block -->
         <div class="accordion" id="accordionExample">
+            <div class="accordion-item"><!-- VA resources -->
+    <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <p class="h6">
+                <img src="/assets/img/va-logo.svg" height="30em">
+                VA RESOURCES</p>
+        </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul class="list-group">
+            
+          </ul>
+        </div>
+    </div>
+  </div><!-- END VA resources -->
             <div class="accordion-item"><!-- Documents and forms-->
   <h2 class="accordion-header" id="headingOne">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -63,13 +103,11 @@
   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
     data-bs-parent="#accordionExample">
     <div class="accordion-body">
-      <ul>
+      <ul class="list-group">
         
-        <a href="www.archives.gov/veterans">www.archives.gov/veterans</a>
-        <p>Retrieve military service records.</p>
+        <li class="list-group-item"><a href="www.archives.gov/veterans">www.archives.gov/veterans</a><span> - Retrieve military service records.</span></li>
         
-        <a href="www.nrc-pad.org">www.nrc-pad.org</a>
-        <p>Advanced Psychiatric Directive forms.</p>
+        <li class="list-group-item"><a href="www.nrc-pad.org">www.nrc-pad.org</a><span> - Advanced Psychiatric Directive forms.</span></li>
         
       </ul>
     </div>
@@ -85,17 +123,15 @@
   <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
     data-bs-parent="#accordionExample">
     <div class="accordion-body">
-      <ul>
+      <ul class="list-group">
         
-        <a href="www.unitedway.org">www.unitedway.org</a>
-        <p></p>
+        <li class="list-group-item"><a href="www.unitedway.org">www.unitedway.org</a><span> - </span></li>
         
-        <a href="www.salvationarmyusa.org">www.salvationarmyusa.org</a>
-        <p></p>
+        <li class="list-group-item"><a href="www.salvationarmyusa.org">www.salvationarmyusa.org</a><span> - </span></li>
         
-        <a href="www.goodwill.org">www.goodwill.org</a>
-        <p>Provides services such as housing assistance.</p>
+        <li class="list-group-item"><a href="www.goodwill.org">www.goodwill.org</a><span> - Provides services such as housing assistance.</span></li>
         
+      </ul>
       </ul>
     </div>
   </div>
@@ -111,18 +147,15 @@
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <strong>** Call your local VA for more information.</strong>
-            <ul>
+            <ul class="list-group">
                 
-                <a href=""></a>
-                <p>Provides assistance with housing both on and off of VA campuses.</p>
+                <li class="list-group-item"><a href=""></a><span> - Provides assistance with housing both on and off of VA campuses.</span></li>
                 
-                <a href=""></a>
-                <p>Provides clothing to Veterans in need.</p>
+                <li class="list-group-item"><a href=""></a><span> - Provides clothing to Veterans in need.</span></li>
                 
-                <a href=""></a>
-                <p>Inpatient rehabilitation for addiction and medical issues.</p>
+                <li class="list-group-item"><a href=""></a><span> - Inpatient rehabilitation for addiction and medical issues.</span></li>
                 
-            </ul>
+              </ul>
         </div>
     </div>
 </div><!-- END lesser known benefits -->
@@ -136,62 +169,44 @@
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
       data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <ul>
-            
-            <a href="www.dav.org">www.dav.org</a>
-            <p>Well established VSO to help with disability claims.</p>
-            
-            <a href="www.mightyoaksprograms.org">www.mightyoaksprograms.org</a>
-            <p>Various recovery camps and groups for veterans.</p>
-            
-            <a href="www.operationfirstresponse.org">www.operationfirstresponse.org</a>
-            <p>Financial and family assistance for active duty and disabled veterans.</p>
-            
-            <a href="www.redcross.org/get-help/military-families/services-for-veterans.html">www.redcross.org/get-help/military-families/services-for-veterans.html</a>
-            <p>Claim assistance</p>
-            
-            <a href="www.operationhomefront.org">www.operationhomefront.org</a>
-            <p>Connects donors with individual Veterans. List a request and get donations. Essentially a GoFundMe for Veterans.</p>
-            
-            <a href="www.legion.org">www.legion.org</a>
-            <p>Various programs for assistance. Too many to list here.</p>
-            
-            <a href="www.usacares.org">www.usacares.org</a>
-            <p>Homeless</p>
-            
-            <a href="www.vfw.org">www.vfw.org</a>
-            <p>Claims</p>
-            
-            <a href="www.vetcenter.va.gov">www.vetcenter.va.gov</a>
-            <p>Centers around the US that specialize in counseling of all types for veterans.</p>
-            
-            <a href="www.wwfs.org">www.wwfs.org</a>
-            <p>Caregiver help</p>
-            
-            <a href="www.fisherhouse.org">www.fisherhouse.org</a>
-            <p>Housing</p>
-            
-            <a href="www.soldiersangels.org">www.soldiersangels.org</a>
-            <p>Food assistance</p>
-            
-            <a href="www.teamneverquit.com/">www.teamneverquit.com/</a>
-            <p>Support group for survivors and families of the fallen.</p>
-            
-            <a href="www.foldsofhonor.org">www.foldsofhonor.org</a>
-            <p>Scholarships.</p>
-            
-            <a href="www.vet2vetusa.org">www.vet2vetusa.org</a>
-            <p>Peer support for psychiatric conditions.</p>
-            
-            <a href="www.ffohf.org">www.ffohf.org</a>
-            <p>Veterans benefits</p>
-            
-            <a href="www.thearmsforces.org">www.thearmsforces.org</a>
-            <p>Assistance to mentally wounded warriors. Psychological help.</p>
-            
-            <a href="www.legalhelpforveterans.com">www.legalhelpforveterans.com</a>
-            <p>Legal assistance with Veteran benefits.</p>
-            
+        <ul class="list-group">
+          
+          <li class="list-group-item"><a href="www.dav.org">www.dav.org</a><span> - Well established VSO to help with disability claims.</span></li>
+          
+          <li class="list-group-item"><a href="www.mightyoaksprograms.org">www.mightyoaksprograms.org</a><span> - Various recovery camps and groups for veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.operationfirstresponse.org">www.operationfirstresponse.org</a><span> - Financial and family assistance for active duty and disabled veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.redcross.org/get-help/military-families/services-for-veterans.html">www.redcross.org/get-help/military-families/services-for-veterans.html</a><span> - Claim assistance</span></li>
+          
+          <li class="list-group-item"><a href="www.operationhomefront.org">www.operationhomefront.org</a><span> - Connects donors with individual Veterans. List a request and get donations. Essentially a GoFundMe for Veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.legion.org">www.legion.org</a><span> - Various programs for assistance. Too many to list here.</span></li>
+          
+          <li class="list-group-item"><a href="www.usacares.org">www.usacares.org</a><span> - Homeless</span></li>
+          
+          <li class="list-group-item"><a href="www.vfw.org">www.vfw.org</a><span> - Claims</span></li>
+          
+          <li class="list-group-item"><a href="www.vetcenter.va.gov">www.vetcenter.va.gov</a><span> - Centers around the US that specialize in counseling of all types for veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.wwfs.org">www.wwfs.org</a><span> - Caregiver help</span></li>
+          
+          <li class="list-group-item"><a href="www.fisherhouse.org">www.fisherhouse.org</a><span> - Housing</span></li>
+          
+          <li class="list-group-item"><a href="www.soldiersangels.org">www.soldiersangels.org</a><span> - Food assistance</span></li>
+          
+          <li class="list-group-item"><a href="www.teamneverquit.com/">www.teamneverquit.com/</a><span> - Support group for survivors and families of the fallen.</span></li>
+          
+          <li class="list-group-item"><a href="www.foldsofhonor.org">www.foldsofhonor.org</a><span> - Scholarships.</span></li>
+          
+          <li class="list-group-item"><a href="www.vet2vetusa.org">www.vet2vetusa.org</a><span> - Peer support for psychiatric conditions.</span></li>
+          
+          <li class="list-group-item"><a href="www.ffohf.org">www.ffohf.org</a><span> - Veterans benefits</span></li>
+          
+          <li class="list-group-item"><a href="www.thearmsforces.org">www.thearmsforces.org</a><span> - Assistance to mentally wounded warriors. Psychological help.</span></li>
+          
+          <li class="list-group-item"><a href="www.legalhelpforveterans.com">www.legalhelpforveterans.com</a><span> - Legal assistance with Veteran benefits.</span></li>
+          
         </ul>
       </div>
     </div>
@@ -206,38 +221,28 @@
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
       data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <ul>
-            
-            <a href="www.buildinghomesforheroes.org">www.buildinghomesforheroes.org</a>
-            <p>Housing, emergency funding, and family support.</p>
-            
-            <a href="www.hfotusa.org">www.hfotusa.org</a>
-            <p>Housing and financial support.</p>
-            
-            <a href="www.rebuildingtogether.org">www.rebuildingtogether.org</a>
-            <p>Housing and community support.</p>
-            
-            <a href="www.homesforheroes.com">www.homesforheroes.com</a>
-            <p>Help buying and selling homes.</p>
-            
-            <a href="www.operationfinallyhome.org">www.operationfinallyhome.org</a>
-            <p>Housing for veterans.</p>
-            
-            <a href="www.nchv.org">www.nchv.org</a>
-            <p>Assistance for homeless veterans.</p>
-            
-            <a href="www.homefrontmilitarynetwork.org">www.homefrontmilitarynetwork.org</a>
-            <p>Financial assistance and benefit information.</p>
-            
-            <a href="www.welcomeveterans.org/vet-programs/resources-for-vets/">www.welcomeveterans.org/vet-programs/resources-for-vets/</a>
-            <p>Welcome Home Veterans 1-800-VETHELP.</p>
-            
-            <a href="www.nchv.org/">www.nchv.org/</a>
-            <p>National Coalition for Homeless Veterans.</p>
-            
-            <a href="www.va.gov/homeless/hud-vash.asp">www.va.gov/homeless/hud-vash.asp</a>
-            <p>VA HUD VASH Homeless Veteran program - Contact your local VA office for the VASH Program for Housing vouchers, or dial 1-877-4AID-VET.</p>
-            
+        <ul class="list-group">
+          
+          <li class="list-group-item"><a href="www.buildinghomesforheroes.org">www.buildinghomesforheroes.org</a><span> - Housing, emergency funding, and family support.</span></li>
+          
+          <li class="list-group-item"><a href="www.hfotusa.org">www.hfotusa.org</a><span> - Housing and financial support.</span></li>
+          
+          <li class="list-group-item"><a href="www.rebuildingtogether.org">www.rebuildingtogether.org</a><span> - Housing and community support.</span></li>
+          
+          <li class="list-group-item"><a href="www.homesforheroes.com">www.homesforheroes.com</a><span> - Help buying and selling homes.</span></li>
+          
+          <li class="list-group-item"><a href="www.operationfinallyhome.org">www.operationfinallyhome.org</a><span> - Housing for veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.nchv.org">www.nchv.org</a><span> - Assistance for homeless veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.homefrontmilitarynetwork.org">www.homefrontmilitarynetwork.org</a><span> - Financial assistance and benefit information.</span></li>
+          
+          <li class="list-group-item"><a href="www.welcomeveterans.org/vet-programs/resources-for-vets/">www.welcomeveterans.org/vet-programs/resources-for-vets/</a><span> - Welcome Home Veterans 1-800-VETHELP.</span></li>
+          
+          <li class="list-group-item"><a href="www.nchv.org/">www.nchv.org/</a><span> - National Coalition for Homeless Veterans.</span></li>
+          
+          <li class="list-group-item"><a href="www.va.gov/homeless/hud-vash.asp">www.va.gov/homeless/hud-vash.asp</a><span> - VA HUD VASH Homeless Veteran program - Contact your local VA office for the VASH Program for Housing vouchers, or dial 1-877-4AID-VET.</span></li>
+          
         </ul>
       </div>
     </div>
@@ -252,49 +257,35 @@
     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.teamriverrunner.org">www.teamriverrunner.org</a>
-            <p>River rafting for veterans.</p>
+            <li class="list-group-item"><a href="www.teamriverrunner.org">www.teamriverrunner.org</a><span> - River rafting for veterans.</span></li>
             
-            <a href="www.heroestoheroes.org">www.heroestoheroes.org</a>
-            <p>River rafting for veterans.12 month program for veterans of combat.</p>
+            <li class="list-group-item"><a href="www.heroestoheroes.org">www.heroestoheroes.org</a><span> - River rafting for veterans.12 month program for veterans of combat.</span></li>
             
-            <a href="www.vettix.com">www.vettix.com</a>
-            <p>River rafting for veterans.Free and discounted tickets to events.</p>
+            <li class="list-group-item"><a href="www.vettix.com">www.vettix.com</a><span> - River rafting for veterans.Free and discounted tickets to events.</span></li>
             
-            <a href="www.warriorbeachretreat.org">www.warriorbeachretreat.org</a>
-            <p>Retreats for combat wounded Veterans.</p>
+            <li class="list-group-item"><a href="www.warriorbeachretreat.org">www.warriorbeachretreat.org</a><span> - Retreats for combat wounded Veterans.</span></li>
             
-            <a href="www.heroesnightout.org">www.heroesnightout.org</a>
-            <p>Peer-to-peer activities, rehabilitation and family rehabilitation, VSO services, loan specialists, rent/utility assistance, etc. Facility located in Texas but serves visitors.</p>
+            <li class="list-group-item"><a href="www.heroesnightout.org">www.heroesnightout.org</a><span> - Peer-to-peer activities, rehabilitation and family rehabilitation, VSO services, loan specialists, rent/utility assistance, etc. Facility located in Texas but serves visitors.</span></li>
             
-            <a href="www.projectsanctuary.us/">www.projectsanctuary.us/</a>
-            <p>Therapy retreats in several locations.</p>
+            <li class="list-group-item"><a href="www.projectsanctuary.us/">www.projectsanctuary.us/</a><span> - Therapy retreats in several locations.</span></li>
             
-            <a href="www.veteranswellnessandhealing.org/retreats/">www.veteranswellnessandhealing.org/retreats/</a>
-            <p>Retreats for veterans that have been diagnosed with PTSD.</p>
+            <li class="list-group-item"><a href="www.veteranswellnessandhealing.org/retreats/">www.veteranswellnessandhealing.org/retreats/</a><span> - Retreats for veterans that have been diagnosed with PTSD.</span></li>
             
-            <a href="www.warfighteradvance.org">www.warfighteradvance.org</a>
-            <p>7 day retreat/boot camp for active duty and veterans.</p>
+            <li class="list-group-item"><a href="www.warfighteradvance.org">www.warfighteradvance.org</a><span> - 7 day retreat/boot camp for active duty and veterans.</span></li>
             
-            <a href="www.samaritanspurse.org/education-2/operation-heal-our-patriots">www.samaritanspurse.org/education-2/operation-heal-our-patriots</a>
-            <p>Retreat in Alaska for veteran couples.</p>
+            <li class="list-group-item"><a href="www.samaritanspurse.org/education-2/operation-heal-our-patriots">www.samaritanspurse.org/education-2/operation-heal-our-patriots</a><span> - Retreat in Alaska for veteran couples.</span></li>
             
-            <a href="www.guitars4vets.org">www.guitars4vets.org</a>
-            <p>Apply to receive a guitar for free.</p>
+            <li class="list-group-item"><a href="www.guitars4vets.org">www.guitars4vets.org</a><span> - Apply to receive a guitar for free.</span></li>
             
-            <a href="www.operationrevamp.org">www.operationrevamp.org</a>
-            <p>Art programs and support for veteran artists.</p>
+            <li class="list-group-item"><a href="www.operationrevamp.org">www.operationrevamp.org</a><span> - Art programs and support for veteran artists.</span></li>
             
-            <a href="www.newhorizonsfoundation.com">www.newhorizonsfoundation.com</a>
-            <p>Retreat for veterans.</p>
+            <li class="list-group-item"><a href="www.newhorizonsfoundation.com">www.newhorizonsfoundation.com</a><span> - Retreat for veterans.</span></li>
             
-            <a href="www.thearmsforces.org">www.thearmsforces.org</a>
-            <p>Expeditions for veterans, survivors, and families of the fallen.</p>
+            <li class="list-group-item"><a href="www.thearmsforces.org">www.thearmsforces.org</a><span> - Expeditions for veterans, survivors, and families of the fallen.</span></li>
             
-            <a href="www.vailveteransprogram.org">www.vailveteransprogram.org</a>
-            <p>Active Heroes Retreat.</p>
+            <li class="list-group-item"><a href="www.vailveteransprogram.org">www.vailveteransprogram.org</a><span> - Active Heroes Retreat.</span></li>
             
           </ul>
         </div>
@@ -310,33 +301,25 @@
     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.militaryfamily.org">www.militaryfamily.org</a>
-            <p>Help for military families and teens</p>
+            <li class="list-group-item"><a href="www.militaryfamily.org">www.militaryfamily.org</a><span> - Help for military families and teens</span></li>
             
-            <a href="www.projectveteranaid.com">www.projectveteranaid.com</a>
-            <p>Help with benefits for pension and disability.</p>
+            <li class="list-group-item"><a href="www.projectveteranaid.com">www.projectveteranaid.com</a><span> - Help with benefits for pension and disability.</span></li>
             
-            <a href="www.ourmilitarykids.org">www.ourmilitarykids.org</a>
-            <p>Extracurricular grants for children of deployed, post 9/11 wounded, or Veterans currently in treatment.</p>
+            <li class="list-group-item"><a href="www.ourmilitarykids.org">www.ourmilitarykids.org</a><span> - Extracurricular grants for children of deployed, post 9/11 wounded, or Veterans currently in treatment.</span></li>
             
-            <a href="www.rebuildhope.com">www.rebuildhope.com</a>
-            <p>Help for families of service members killed in the line of duty.</p>
+            <li class="list-group-item"><a href="www.rebuildhope.com">www.rebuildhope.com</a><span> - Help for families of service members killed in the line of duty.</span></li>
             
-            <a href="www.buildasign.com/troops">www.buildasign.com/troops</a>
-            <p>FREE “welcome home sign”sign for families returning troops</p>
+            <li class="list-group-item"><a href="www.buildasign.com/troops">www.buildasign.com/troops</a><span> - FREE “welcome home sign”sign for families returning troops</span></li>
             
-            <a href="www.rebuildhope.com">www.rebuildhope.com</a>
-            <p>Help for families of service members</p>
+            <li class="list-group-item"><a href="www.rebuildhope.com">www.rebuildhope.com</a><span> - Help for families of service members</span></li>
             
-            <a href="www.militarychild.org">www.militarychild.org</a>
-            <p>Support and assistance for military children and parents.</p>
+            <li class="list-group-item"><a href="www.militarychild.org">www.militarychild.org</a><span> - Support and assistance for military children and parents.</span></li>
             
-            <a href="www.campcorral.org">www.campcorral.org</a>
-            <p>Camps for kids and veteran families.</p>
+            <li class="list-group-item"><a href="www.campcorral.org">www.campcorral.org</a><span> - Camps for kids and veteran families.</span></li>
             
-          </ul> 
+          </ul>
         </div>
     </div>
   </div><!-- END families and dependents -->
@@ -350,23 +333,19 @@
     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.nmcrs.org">www.nmcrs.org</a>
-            <p>Financial assistance for Navy and Marine Corp active duty and retired.</p>
+            <li class="list-group-item"><a href="www.nmcrs.org">www.nmcrs.org</a><span> - Financial assistance for Navy and Marine Corp active duty and retired.</span></li>
             
-            <a href="www.afas.org">www.afas.org</a>
-            <p>Financial assistance, emergency travel, and childcare assistance for Air Force active, retired, and veterans.</p>
+            <li class="list-group-item"><a href="www.afas.org">www.afas.org</a><span> - Financial assistance, emergency travel, and childcare assistance for Air Force active, retired, and veterans.</span></li>
             
-            <a href="www.greenberetfoundation.org">www.greenberetfoundation.org</a>
-            <p>Special Forces specific. Family support, casualty support, transitioning support.</p>
+            <li class="list-group-item"><a href="www.greenberetfoundation.org">www.greenberetfoundation.org</a><span> - Special Forces specific. Family support, casualty support, transitioning support.</span></li>
             
-            <a href="www.armyemergencyrelief.org">www.armyemergencyrelief.org</a>
-            <p>Grants, interest-free loans, and scholarships for Army active, retired, or veteran.</p>
+            <li class="list-group-item"><a href="www.armyemergencyrelief.org">www.armyemergencyrelief.org</a><span> - Grants, interest-free loans, and scholarships for Army active, retired, or veteran.</span></li>
             
-            <a href="www.mycgma.org">www.mycgma.org</a>
-            <p>Financial assistance for Coast Guard active duty and retired.</p>
+            <li class="list-group-item"><a href="www.mycgma.org">www.mycgma.org</a><span> - Financial assistance for Coast Guard active duty and retired.</span></li>
             
+          </ul>
           </ul>
         </div>
     </div>
@@ -382,49 +361,35 @@
     <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.operationsecondchance.org">www.operationsecondchance.org</a>
-            <p>70% or higher rating with $4000 a month in income with honorable discharge. Retreats, scholarships, and financial assistance with necessities like housing and utilities.</p>
+            <li class="list-group-item"><a href="www.operationsecondchance.org">www.operationsecondchance.org</a><span> - 70% or higher rating with $4000 a month in income with honorable discharge. Retreats, scholarships, and financial assistance with necessities like housing and utilities.</span></li>
             
-            <a href="www.veteransairlift.org">www.veteransairlift.org</a>
-            <p>Free private air transportation for combat injured veterans for medical or other compassionate purposes.</p>
+            <li class="list-group-item"><a href="www.veteransairlift.org">www.veteransairlift.org</a><span> - Free private air transportation for combat injured veterans for medical or other compassionate purposes.</span></li>
             
-            <a href="www.militarywarriors.org">www.militarywarriors.org</a>
-            <p>Housing, transportation, business, and training for wounded only.</p>
+            <li class="list-group-item"><a href="www.militarywarriors.org">www.militarywarriors.org</a><span> - Housing, transportation, business, and training for wounded only.</span></li>
             
-            <a href="www.saluteheroes.org">www.saluteheroes.org</a>
-            <p>Employment resources, financial aid, retreats for OIF wounded veterans with a 30% or higher disability rating.</p>
+            <li class="list-group-item"><a href="www.saluteheroes.org">www.saluteheroes.org</a><span> - Employment resources, financial aid, retreats for OIF wounded veterans with a 30% or higher disability rating.</span></li>
             
-            <a href="www.freedomalliance.org">www.freedomalliance.org</a>
-            <p>Scholarships and other assistance for injured veterans and families.</p>
+            <li class="list-group-item"><a href="www.freedomalliance.org">www.freedomalliance.org</a><span> - Scholarships and other assistance for injured veterans and families.</span></li>
             
-            <a href="www.woundedwarriorproject.org">www.woundedwarriorproject.org</a>
-            <p>Training and planning for health, finances, careers. For physically OR mentally wounded Veterans.</p>
+            <li class="list-group-item"><a href="www.woundedwarriorproject.org">www.woundedwarriorproject.org</a><span> - Training and planning for health, finances, careers. For physically OR mentally wounded Veterans.</span></li>
             
-            <a href="www.moonlightfund.org">www.moonlightfund.org</a>
-            <p>Assistance to burn victims.</p>
+            <li class="list-group-item"><a href="www.moonlightfund.org">www.moonlightfund.org</a><span> - Assistance to burn victims.</span></li>
             
-            <a href="www.va.gov/education/about-gi-bill-benefits/post-9-11/yellow-ribbon-program/">www.va.gov/education/about-gi-bill-benefits/post-9-11/yellow-ribbon-program/</a>
-            <p>Additional VA assistance for those that qualify for the Post 9/11 GI Bill.</p>
+            <li class="list-group-item"><a href="www.va.gov/education/about-gi-bill-benefits/post-9-11/yellow-ribbon-program/">www.va.gov/education/about-gi-bill-benefits/post-9-11/yellow-ribbon-program/</a><span> - Additional VA assistance for those that qualify for the Post 9/11 GI Bill.</span></li>
             
-            <a href="www.operationfamilyfund.org">www.operationfamilyfund.org</a>
-            <p>Assistance for veterans of Operation Enduring Iraqi Freedom.</p>
+            <li class="list-group-item"><a href="www.operationfamilyfund.org">www.operationfamilyfund.org</a><span> - Assistance for veterans of Operation Enduring Iraqi Freedom.</span></li>
             
-            <a href="www.helpingahero.org">www.helpingahero.org</a>
-            <p>Various types of assistance for severely wounded veterans.</p>
+            <li class="list-group-item"><a href="www.helpingahero.org">www.helpingahero.org</a><span> - Various types of assistance for severely wounded veterans.</span></li>
             
-            <a href="www.vacationsforveterans.org">www.vacationsforveterans.org</a>
-            <p>Vacations for purple heart recipients.</p>
+            <li class="list-group-item"><a href="www.vacationsforveterans.org">www.vacationsforveterans.org</a><span> - Vacations for purple heart recipients.</span></li>
             
-            <a href="www.catchaliftfund.org">www.catchaliftfund.org</a>
-            <p>Gym memberships, fitness assistance, and therapy for combat injured veterans.</p>
+            <li class="list-group-item"><a href="www.catchaliftfund.org">www.catchaliftfund.org</a><span> - Gym memberships, fitness assistance, and therapy for combat injured veterans.</span></li>
             
-            <a href="www.purpleheartfoundation.org">www.purpleheartfoundation.org</a>
-            <p>Assistance for Purple Heart recipients.</p>
+            <li class="list-group-item"><a href="www.purpleheartfoundation.org">www.purpleheartfoundation.org</a><span> - Assistance for Purple Heart recipients.</span></li>
             
-            <a href="www.purpleheart.org">www.purpleheart.org</a>
-            <p>Assistance for Purple Heart recipients.</p>
+            <li class="list-group-item"><a href="www.purpleheart.org">www.purpleheart.org</a><span> - Assistance for Purple Heart recipients.</span></li>
             
           </ul>
         </div>
@@ -440,22 +405,17 @@
     <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="http://www.houndsforheroes.org">http://www.houndsforheroes.org</a>
-            <p>Service dogs for Veterans. Texas only.</p>
+            <li class="list-group-item"><a href="http://www.houndsforheroes.org">http://www.houndsforheroes.org</a><span> - Service dogs for Veterans. Texas only.</span></li>
             
-            <a href="http://www.impactahero.org">http://www.impactahero.org</a>
-            <p>Program for financial assistance and leadership training. Texas only.</p>
+            <li class="list-group-item"><a href="http://www.impactahero.org">http://www.impactahero.org</a><span> - Program for financial assistance and leadership training. Texas only.</span></li>
             
-            <a href="www.azmam.org">www.azmam.org</a>
-            <p>FInancial assistance, scholarships, backpacks for college.Arizona only.</p>
+            <li class="list-group-item"><a href="www.azmam.org">www.azmam.org</a><span> - FInancial assistance, scholarships, backpacks for college.Arizona only.</span></li>
             
-            <a href="www.wearevirginiaveterans.org">www.wearevirginiaveterans.org</a>
-            <p>Various resources for Virginia only.</p>
+            <li class="list-group-item"><a href="www.wearevirginiaveterans.org">www.wearevirginiaveterans.org</a><span> - Various resources for Virginia only.</span></li>
             
-            <a href="www.vailveteransprogram.org">www.vailveteransprogram.org</a>
-            <p>Active duty, veteran, familyactivities summer and winter in Vail, CO.</p>
+            <li class="list-group-item"><a href="www.vailveteransprogram.org">www.vailveteransprogram.org</a><span> - Active duty, veteran, familyactivities summer and winter in Vail, CO.</span></li>
             
           </ul>
         </div>
@@ -471,49 +431,35 @@
     <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.vfw.org/assistance/financial-grants">www.vfw.org/assistance/financial-grants</a>
-            <p>Veterans of Foreign Wars – Unmet Needs - Unmet Needs will now only assist pre-9/11 era veterans if they have been out less than 3 years.</p>
+            <li class="list-group-item"><a href="www.vfw.org/assistance/financial-grants">www.vfw.org/assistance/financial-grants</a><span> - Veterans of Foreign Wars – Unmet Needs - Unmet Needs will now only assist pre-9/11 era veterans if they have been out less than 3 years.</span></li>
             
-            <a href="www.vfw.org/community/troop-support">www.vfw.org/community/troop-support</a>
-            <p>Military Assistance Program (MAP) - Only assists deployed service members.</p>
+            <li class="list-group-item"><a href="www.vfw.org/community/troop-support">www.vfw.org/community/troop-support</a><span> - Military Assistance Program (MAP) - Only assists deployed service members.</span></li>
             
-            <a href="www.legion.org/">www.legion.org/</a>
-            <p>American Legion - Visit online or call 800-504-4098 and request a representative in your local area. Please note, the Legion will only help pre-9/11 if they are members.</p>
+            <li class="list-group-item"><a href="www.legion.org/">www.legion.org/</a><span> - American Legion - Visit online or call 800-504-4098 and request a representative in your local area. Please note, the Legion will only help pre-9/11 if they are members.</span></li>
             
-            <a href="www.honorboundfoundation.org">www.honorboundfoundation.org</a>
-            <p></p>
+            <li class="list-group-item"><a href="www.honorboundfoundation.org">www.honorboundfoundation.org</a><span> - </span></li>
             
-            <a href="www.naavets.org/">www.naavets.org/</a>
-            <p>National Association of American Veterans</p>
+            <li class="list-group-item"><a href="www.naavets.org/">www.naavets.org/</a><span> - National Association of American Veterans</span></li>
             
-            <a href="www.dvnf.org/">www.dvnf.org/</a>
-            <p>Disabled Veterans National Foundation (DVNF)</p>
+            <li class="list-group-item"><a href="www.dvnf.org/">www.dvnf.org/</a><span> - Disabled Veterans National Foundation (DVNF)</span></li>
             
-            <a href="www.modestneeds.org/">www.modestneeds.org/</a>
-            <p>ModestNeeds.org</p>
+            <li class="list-group-item"><a href="www.modestneeds.org/">www.modestneeds.org/</a><span> - ModestNeeds.org</span></li>
             
-            <a href="www.operationfirstresponse.org/">www.operationfirstresponse.org/</a>
-            <p>Operation First Response</p>
+            <li class="list-group-item"><a href="www.operationfirstresponse.org/">www.operationfirstresponse.org/</a><span> - Operation First Response</span></li>
             
-            <a href="www.nmcrs.org/Navy/">www.nmcrs.org/Navy/</a>
-            <p>Marine Corps Relief Society (NMCRS)</p>
+            <li class="list-group-item"><a href="www.nmcrs.org/Navy/">www.nmcrs.org/Navy/</a><span> - Marine Corps Relief Society (NMCRS)</span></li>
             
-            <a href="www.penfedfoundation.org/">www.penfedfoundation.org/</a>
-            <p>PenFed Foundation</p>
+            <li class="list-group-item"><a href="www.penfedfoundation.org/">www.penfedfoundation.org/</a><span> - PenFed Foundation</span></li>
             
-            <a href="www.saluteheroes.org/">www.saluteheroes.org/</a>
-            <p>Salute Americas Heroes</p>
+            <li class="list-group-item"><a href="www.saluteheroes.org/">www.saluteheroes.org/</a><span> - Salute Americas Heroes</span></li>
             
-            <a href="www.fallenpatriotfund.org/">www.fallenpatriotfund.org/</a>
-            <p>Fallen Patriot Fund</p>
+            <li class="list-group-item"><a href="www.fallenpatriotfund.org/">www.fallenpatriotfund.org/</a><span> - Fallen Patriot Fund</span></li>
             
-            <a href="www.hopeforthewarriors.org/">www.hopeforthewarriors.org/</a>
-            <p>Hope For The Warriors</p>
+            <li class="list-group-item"><a href="www.hopeforthewarriors.org/">www.hopeforthewarriors.org/</a><span> - Hope For The Warriors</span></li>
             
-            <a href="www.operationhomefront.org/">www.operationhomefront.org/</a>
-            <p>Operation Homefront</p>
+            <li class="list-group-item"><a href="www.operationhomefront.org/">www.operationhomefront.org/</a><span> - Operation Homefront</span></li>
             
           </ul>
         </div>
@@ -529,21 +475,17 @@
     <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <ul>
+          <ul class="list-group">
             
-            <a href="www.veteransinc.org/">www.veteransinc.org/</a>
-            <p>Veterans Inc.</p>
+            <li class="list-group-item"><a href="www.veteransinc.org/">www.veteransinc.org/</a><span> - Veterans Inc.</span></li>
             
-            <a href="www.purpleheartcars.org/">www.purpleheartcars.org/</a>
-            <p>Purple Heart Cars</p>
+            <li class="list-group-item"><a href="www.purpleheartcars.org/">www.purpleheartcars.org/</a><span> - Purple Heart Cars</span></li>
             
-            <a href="www.familiesofwarveterans.org/veterans-program/">www.familiesofwarveterans.org/veterans-program/</a>
-            <p>Families of War Veterans</p>
+            <li class="list-group-item"><a href="www.familiesofwarveterans.org/veterans-program/">www.familiesofwarveterans.org/veterans-program/</a><span> - Families of War Veterans</span></li>
             
-            <a href="www.cars4christmas.org/">www.cars4christmas.org/</a>
-            <p>Cars 4 Christmas</p>
+            <li class="list-group-item"><a href="www.cars4christmas.org/">www.cars4christmas.org/</a><span> - Cars 4 Christmas</span></li>
             
-          </ul>  
+          </ul>
         </div>
     </div>
   </div><!-- END cars -->
@@ -557,11 +499,11 @@
     </div>
 <!-- modal for RRTP residents --> 
  <!-- Modal -->
-<div class="modal fade" id="rrtpResident" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="rrtpResidentModal" tabindex="-1" aria-labelledby="rrtpResidentModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Coming Soon!</h5>
+          <h5 class="modal-title" id="rrtpResidentModal">Coming Soon!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
