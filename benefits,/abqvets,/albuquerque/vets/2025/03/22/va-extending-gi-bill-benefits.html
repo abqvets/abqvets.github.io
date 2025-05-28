@@ -37,6 +37,26 @@
         .discord-purple-bg {
             background-color: #7289DA   ;
         }
+        .pattaya {
+    font-family: "Pattaya", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .display-8 {
+    font-size: 1.8em;
+  }
+
+  .display-9 {
+    font-size: 1.2em;
+  }
+
+  .teal-color {
+    color: #16a085;
+  }
+  .teal-background {
+    background-color: #16a085;
+  }
     </style>
 </head>
 <!-- start body -->
@@ -84,15 +104,24 @@
 <!-- end footer -->
 <!-- start modal for RRTP residents -->
 <!-- Modal -->
-<div class="modal fade" id="rrtpResidentModal" tabindex="-1" aria-labelledby="rrtpResidentModal" aria-hidden="true">
+<div class="container">
+  <div class="modal fade" id="rrtpResidentModal" tabindex="-1" aria-labelledby="rrtpResidentModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="rrtpResidentModal">Coming Soon!</h5>
+          <!-- <h5 class="modal-title" id="rrtpResidentModal">Coming Soon!</h5> -->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          This is the future home of Albuquerque RRTP Resident Resources. Check back again soon!
+          <div class="row m-5" id="signupform"></div>
+          <div class="row mt-5 pt-5 bg-light">
+            <h1 class="display-6 teal-color pattaya mt-5">Hi there graduate! </h1>
+            <p class="">Sign up below to make sure you stay in touch with Dr. Y and the group!</p>
+            <p class="text-muted">(and to receive updates on resources and future events!)</p>
+            <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://snhn5.mjt.lu/wgt/snhn5/0wyo/form?c=bc6d5baa" width="100%" style="height: 0;"></iframe>
+<script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -101,7 +130,8 @@
       </div>
     </div>
   </div>
-  <!-- EndModal-->
+</div>
+<!-- EndModal-->
 
 <!-- end modal for RRTP residents -->
 </body>
