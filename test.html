@@ -20,6 +20,37 @@
      <!-- <link rel="stylesheet" href="/assets/css/aftercarestyle.css" /> -->
     <style>
 
+/* Custom colors 
+Greens: 
+ turquoise: #1abc9c
+ green sea: #1abc9c
+ emerald: #1abc9c
+ nephritis: #27ae60
+Blues: 
+ peter river: #3498db
+ belize hole: #2980b9 
+Purples: 
+ amethyst: #9b59b6
+ wisteria: #8e44ad
+Blacks:
+ wet asphalt: #34495e
+ midnight blue: #2c3e50
+YellowsOranges: 
+ sunflower: #f1c40f
+ orange: #f39c12
+ carrot: #e67e22
+ pumpkin: #d35400
+Reds:
+ alizarin: #e74c3c
+ pomegranate: #c0392b
+WhitesGrays:
+ clouds: #ecf0f1
+ silver: #bdc3c7
+ concrete: #95a5a6
+ asbestos: #7f8c8d
+ 
+ */
+
 
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -45,6 +76,7 @@
 
   .display-8 {
     font-size: 1.8em;
+    color: #2980b9;
   }
 
   .display-9 {
@@ -57,12 +89,16 @@
   .teal-background {
     background-color: #16a085;
   }
+
+  .belize-bg {
+    background-color: #2980b9;
+  }
     </style>
 </head>
 <!-- start body -->
 <body>
     
-<nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+<nav class="navbar navbar-dark navbar-expand-lg text-white belize-bg">
   <div class="container-fluid">
     <!-- -->
     <a class="navbar-brand" href="https://abqvets.com"><img src="/assets/img/abqvets-white.svg" height="70px"></a>
@@ -77,13 +113,13 @@
           </a>
         </li>
         <li>
-          <a class="nav-item btn btn-primary" target="_blank"
+          <a class="nav-item btn text-white" target="_blank"
             href="https://www.va.gov/new-mexico-health-care/locations/raymond-g-murphy-department-of-veterans-affairs-medical-center/">
             <i class="bi-hospital-fill"></i> NM VA Official</a>
         </li>
         <!-- VA Directions -->
         <li>
-          <a class="nav-item btn btn-primary" href="http://maps.apple.com/?q=35.053963,-106.57778">
+          <a class="nav-item btn text-white" href="http://maps.apple.com/?q=35.053963,-106.57778">
             <i class="bi-hospital-fill"></i> NM VA Directions</a>
         </li>
         <!-- ABQ RRTP modal-->
@@ -107,73 +143,206 @@
 <!-- Begin Content Section -->
 
 <!-- start hero header-->
-<section class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull"
-    style="background-image: url('./assets/img/helmets_min.jpg');background-size: cover;">
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6 text-center text-white">
-                <h2 class="display-3 fw-bold mt-4 mb-3">Vets Helping Vets</h2>
-                <div class="">
-                    <h3 class="lead mb-5 fw-bold">
-                        There's countless resources out there for those that have served our country. The problem is finding them and utilizing them. Welcome to abqvets.com. Created by a Veteran, for Veterans. We try to find and aggregate as many of those resources as possible and make them easily accessible for Veterans like you.
-                    </h3>
-                    <!-- start buttons -->
-                    <div class="d-grid gap-2 mb-4 d-sm-flex justify-content-sm-center btn-group" role="group"
-                        aria-label="heroButtons">
-                        <a href="/index.html#vaResources" class="btn bsb-btn-xl btn-light gap-3 fs-4">Resources</a>
-                        <a href="https://www.va.gov/new-mexico-health-care/events/" class="btn bsb-btn-xl btn-light fs-4">VA Events</a>
-                        <p> </p>
-                        </p>
-                    </div>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>ATTN: Vets!</strong> - Know of a resource (person, place, phone #, etc.) that might help out a fellow Vet? <a href="mailto:mike@abqvets.com">Email me</a> and I'll add it to the site for other Vets to benefit from.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-                    <!-- end buttons -->
-                </div>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="row bg-primary p-2">
+=
+<div class="row belize-bg p-2">
     <div class="text-center p-2">
         <img src="/assets/img/patches-white.svg" /> 
     </div>
 </div> 
 <!-- start main Container -->
 <!-- start content from page pull-->
-<div class="col-lg-8 mx-auto p-3 py-md-5">
-    </p>
-    <div class="container text-center">
-        <!-- <img src="../assets/img/abqvets-logo.svg"/> -->
-        </p>
-        <div class="container">Mike's Unofficial List of</div>
-        <span class="h1">VETERAN RESOURCES </span><span class="badge bg-danger">beta</span>
-        </p>
-        <!-- <h7>No ads. No bull****. Just vetresources.</h7> -->
 
-    </div>
-    </p>
-    </p>
 
     <p>accordion test</p>
 Deprecated
 
-<h4>Test for loop</h4>
-
-
-<h4>check page datafeed type</h4> tested *WORKING*
-
-
 
     <!-- End Content Section -->
 
-
-TEMPLATE FOR UPDATE - place inside of "accordion-body" DIV element
-      <ul class="list-group">
+    vetlinks 
+    <!-- card style setup for links on VA Official benefits -->
+<!-- <div class="container">
+    <div class="row">
         
-      </ul>
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-hospital-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Healthcare</p>
+                <p class="card-text">Apply for VA health care, find out how to access services, and manage your health and benefits online.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/health-care" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-file-medical-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">VA Disablity</p>
+                <p class="card-text">File a claim for disability compensation for conditions related to your military service, and manage your benefits over time.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/disability" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-mortarboard-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Education & Training</p>
+                <p class="card-text">Apply for and manage your GI Bill and other education benefits to help pay for college and training programs.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/education" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-briefcase-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Careers & Employment</p>
+                <p class="card-text">Apply for vocational rehabilitation services, get support for your Veteran-owned small business, and access other career resources.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/careers-employment" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-coin px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Pension</p>
+                <p class="card-text">Apply for monthly payments for wartime Veterans and survivors with limited or no income who meet certain age and disability requirements.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/pension" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-house-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Housing Assistance</p>
+                <p class="card-text">Find out if you're eligible for a VA-backed home loan. If you have a service-connected disability, see if you qualify for a housing grant to help you live more independently.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/housing-assistance" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-life-preserver px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Life Insurance</p>
+                <p class="card-text">Explore VA life insurance options for Veterans, service members, and families. Manage your policy online, file claims for benefits, and access helpful resources.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/life-insurance" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-star-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Burials & Memorials</p>
+                <p class="card-text">Get help planning a burial in a VA national cemetery, order a headstone or other memorial item to honor a Veteran's service, and apply for survivor and dependent benefits.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/burials-memorials" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-file-text-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Records</p>
+                <p class="card-text">Apply for a printed Veteran ID card, get your VA benefit letters and medical records, and learn how to apply for a discharge upgrade.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/records" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-person-vcard px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Service Member Benefits</p>
+                <p class="card-text">Find out what benefits you may be eligible for during service and which time-sensitive benefits to consider when separating or retiring.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/service-member-benefits" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-people-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">Family Member Benefits</p>
+                <p class="card-text">Learn about the benefits you may qualify for as a spouse, dependent, or survivor. And find out what you're eligible for as a family member caring for a Veteran with disabilities.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://www.va.gov/family-member-benefits" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="card text-bg-light mx-auto mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-header bg-white display-6 text-primary text-center"><i class="bi-info-circle-fill px-1"></i>
+                </h5>
+                <p class="text-primary display-8 text-center">VA Department Information</p>
+                <p class="card-text">Learn more about the VA departments that manage our benefit and health care programs.</p>
+            </div>
+            <div class="card-footer bg-white text-center">
+                <a href="https://department.va.gov/" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+    </div>
+</div> -->
+
+<!-- or list group image left -->
+<li class="list-group-item">
+  <div class="card mb-3" style="width: auto;">
+    <div class="row g-0">
+      <div class="col-md-4 bg-primary text-center">
+        <h1 class="display-1 mx-auto pt-4 align-middle text-white"><i class=""></i></h1>
+
+       
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <a href="http://" target="_blank" class="btn btn-primary"></a>
+          <!-- <p class="card-text"><small class="text-body-secondary"></small></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
 </div> <!-- end of start tag -->
 <!-- footer -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -190,7 +359,7 @@ TEMPLATE FOR UPDATE - place inside of "accordion-body" DIV element
      <a href="https://github.com/mike-hmg">Corazón</a>
 
      </footer>
-<div class="text-center"><a style="color: #ecf0f1;" href="/supersecret.html">Be curious, not judgmental</a></div>
+<div class="text-center"><a style="color: #298;" href="/uploads.html">Aftercare Docs</a></div>
 <!-- end main container-->
 <!-- end footer -->
 <!-- start modal for RRTP residents -->
