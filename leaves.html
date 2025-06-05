@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Floating Tree Leaves with Thought Bubbles</title>
+<style>
+  /* Basic page & container setup */
+  body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #a3d5ff, #74b9ff);
+  }
+
+  .river {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Leaf container styles */
+  .leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    pointer-events: auto;
+    will-change: transform, left, top;
+  }
+
+  /* Make SVG fill inherit from current color */
+  .leaf svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Thought bubble styles */
+  .thought-bubble {
+    position: absolute;
+    bottom: 100%;           /* place just above the leaf */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #888;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    opacity: 0;             /* start transparent */
+    animation: fadeIn 0.5s ease forwards; /* fade in animation */
+    pointer-events: none;   /* so it doesn't block clicks */
+  }
+
+  /* Thought bubble "tail" circles */
+  .thought-bubble::before,
+  .thought-bubble::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border: 2px solid #888;
+    border-radius: 50%;
+  }
+
+  .thought-bubble::before {
+    width: 10px;
+    height: 10px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .thought-bubble::after {
+    width: 6px;
+    height: 6px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Fade in keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Container for the floating leaves -->
+  <div class="river" id="river"></div>
+
+<script>
+  const river = document.getElementById('river');
+
+  // Colors for leaves (these drive the SVG fill via currentColor)
+//   const leafColors = ['#f4e7a1', '#c0392b', '#bfa179'];
+  // flat colors
+  const leafColors = ['#ff7675', '#00b894', '#e17055', '#fdcb6e', '#00cec9'];
+
+  // URL to the external SVG file for a leaf shape
+  const svgURL = '/assets/img/svg/leaves.svg';
+
+  // Function to create and animate a single leaf
+  async function createLeaf() {
+    try {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('leaf');
+
+      // Pick a random color and assign to wrapper (for currentColor in SVG)
+      const color = leafColors[Math.floor(Math.random() * leafColors.length)];
+      wrapper.style.color = color;
+
+      // Fetch the external SVG file and inline it into the wrapper
+      const res = await fetch(svgURL);
+      const svgText = await res.text();
+      const temp = document.createElement('div');
+      temp.innerHTML = svgText;
+      const svg = temp.querySelector('svg');
+      if (!svg) return; // Fail gracefully if SVG doesn't load
+
+      // Ensure SVG fills the wrapper area
+      svg.style.width = '100%';
+      svg.style.height = '100%';
+
+      wrapper.appendChild(svg);
+
+      // Initial position off screen left and random vertical position
+      wrapper.style.left = '-50px';
+      wrapper.style.top = `${Math.random() * 80 + 10}%`;
+
+      // Random initial rotation angle and scale for size variety
+      const scale = Math.random() * 0.5 + 0.75; // 0.75x to 1.25x size
+      let rotation = Math.random() * 360;
+
+      // Apply initial transform
+      wrapper.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+
+      // Animation state variables
+      let posX = -50; // starting x (left)
+      let posY = parseFloat(wrapper.style.top); // starting y (top %)
+      let speed = Math.random() * 0.3 + 0.1; // horizontal speed
+      const floatDir = Math.random() < 0.5 ? -1 : 1; // float sway direction
+      let clicked = false;
+
+      // Sway offset for unique sine wave start points
+      const swayOffset = Math.random() * 1000;
+
+      // Optional random spin speed for rotation animation
+      const spinSpeed = (Math.random() * 0.4 + 0.1);
+
+      // Animate loop for this leaf
+      function animate() {
+        posX += speed;
+
+        // Horizontal sway using sine wave
+        const sway = Math.sin((Date.now() + swayOffset) / 1000) * 10;
+
+        // Vertical subtle float movement
+        posY += Math.sin(Date.now() / 1000 + floatDir) * 0.05 * floatDir;
+
+        // Increment rotation angle for slow spin
+        rotation += spinSpeed;
+
+        // Update position and transform with rotation, scale, and sway
+        wrapper.style.left = `${posX + sway}px`;
+        wrapper.style.top = `${posY}%`;
+        wrapper.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+
+        // Remove leaf if it floats past right edge of screen
+        if (posX > window.innerWidth + 60) {
+          river.removeChild(wrapper);
+        } else {
+          requestAnimationFrame(animate);
+        }
+      }
+
+      // Function to add the thought bubble above the leaf
+      function addThoughtBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('thought-bubble');
+        wrapper.appendChild(bubble);
+      }
+
+      // Click and touch event handlers for leaf
+      wrapper.addEventListener('click', () => {
+        if (!clicked) {
+          speed *= 4;        // speed up leaf
+          addThoughtBubble(); // show thought bubble
+          clicked = true;     // prevent multiple clicks
+        }
+      });
+
+      wrapper.addEventListener('touchstart', () => {
+        if (!clicked) {
+          speed *= 4;
+          addThoughtBubble();
+          clicked = true;
+        }
+      });
+
+      // Add the leaf to the river container and start animating
+      river.appendChild(wrapper);
+      animate();
+
+    } catch (e) {
+      console.error('Error loading leaf SVG:', e);
+    }
+  }
+
+  // Create leaves repeatedly up to a max count
+  setInterval(() => {
+    if (document.querySelectorAll('.leaf').length < 20) {
+      createLeaf();
+    }
+  }, 2000);
+
+  // Initial batch of leaves for quick start
+  for (let i = 0; i < 5; i++) {
+    setTimeout(createLeaf, i * 1000);
+  }
+</script>
+</body>
+</html>
