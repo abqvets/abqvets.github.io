@@ -1,0 +1,27 @@
+- name: abqvets
+  url: https://abqvets.com 
+  friendlyurl: www.abqvets.com 
+  email: mike@abqvets.com
+  adminname: mike
+  brandname:
+  logo:
+  palette: 
+  sitebuild:
+    foundation: 
+
+
+
+
+
+
+- name: aftercare
+  url: https://abqvets.com/aftercare
+  friendlyurl: www.abqvets.com/aftercare
+  email: mike@abqvets.com
+  adminname: somya 
+  brandname: Yeturo Aftercare
+  logo: 
+  palette: 
+  sitebuild:
+    foundation: bootstrap
+

@@ -1,0 +1,59 @@
+- title: NMCRS - Navy Marine Corp Relief Society 
+  url: www.nmcrs.org
+  description: Financial assistance for Navy and Marine Corp active duty and retired.
+  image: 
+  tags: 
+  category: branch-specific
+  category icon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: --
+  url: www.afas.org
+  description: Financial assistance, emergency travel, and childcare assistance for Air Force active, retired, and veterans.
+  image: 
+  tags: 
+  category: branch-specific
+  category icon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: Green Beret Foundation
+  url: www.greenberetfoundation.org
+  description: Special Forces specific. Family support, casualty support, transitioning support.
+  image: 
+  tags: 
+  category: branch-specific
+  category icon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: --
+  url: www.armyemergencyrelief.org
+  description: Grants, interest-free loans, and scholarships for Army active, retired, or veteran.
+  image: 
+  tags: 
+  category: branch-specific
+  category icon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: --
+  url: www.mycgma.org
+  description: Financial assistance for Coast Guard active duty and retired.
+  image: 
+  tags: 
+  category: branch-specific
+  category icon:
+  contact:
+    email:
+    phone:
+    address:

@@ -1,0 +1,19 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingBranch">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseBranch" aria-expanded="false" aria-controls="collapseBranch">
+      <p class="display-9"><i class="bi-person-vcard"></i> - Branch-Specific</p> <!-- Name and Icon -->
+    </button>
+  </h2>
+  <div id="collapseBranch" class="accordion-collapse collapse" aria-labelledby="headingBranch"
+    data-bs-parent="#mainAccordion">
+    <div class="accordion-body">
+      <ul class="list-group">
+        {% for resource in site.data.vetresources.branch %} <!-- only change category -->
+        {% include elements/card-list-loop.html %}
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div><!-- END branch -->

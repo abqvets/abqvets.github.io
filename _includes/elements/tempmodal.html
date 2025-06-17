@@ -1,0 +1,27 @@
+<!-- Modal -->
+<div class="container">
+  <div class="modal fade" id="rrtpResidentModal" tabindex="-1" aria-labelledby="rrtpResidentModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="rrtpResidentModal">Coming Soon!</h5> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row m-5" id="signupform"></div>
+          <div class="row mt-5 pt-5 bg-light">
+            <h1 class="display-6 teal-color pattaya mt-5">Hi there graduate! </h1>
+            <p class="">Sign up below to make sure you stay in touch with Dr. Y and the group!</p>
+            <p class="text-muted">(and to receive updates on resources and future events!)</p>
+            {% include aftercare/aftercareform.html %}
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EndModal-->

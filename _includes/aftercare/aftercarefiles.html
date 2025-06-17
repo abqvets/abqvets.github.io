@@ -1,0 +1,17 @@
+<h1 class="display-5 teal-color">Compiled and Corrected Packet</h1>
+
+<a class="display-8" href="/assets/aftercare/Final_RC_Orientation_Packet_combined.pdf"><i class="bi bi-arrow-right"> - </i><s>Orientation Packet Complete</s> - <span class="text-pomegranate">Deprecated (last update 5/27/25)</span></a>
+{% assign pdf_files = site.static_files | where: "pdf", true %}
+<h1 class="display-5 teal-color mt-5">PDF Files for Orientation  <span class="badge badge-primary pomegranate-bg align-top" style="font-size: small;">updated: {{ page.updated }}</span></h1>
+{% for pdf in pdf_files %}
+<a class="display-8" href="{{ pdf.path }}"><i class="bi bi-arrow-right"> - </i>{{ pdf.name }}</a>
+{% endfor %}
+
+
+{% assign source_files = site.static_files | where: "source", true %}
+<h1 class="display-5 teal-color mt-5">Source Files for Orientation  <span class="badge badge-primary pomegranate-bg align-top" style="font-size: small;">updated: {{ page.updated }}</span></h1>
+<span class="badge">updated: {{ page.updated }}</span> 
+{% for source in source_files %}
+<a class="display-8" href="{{ source.path }}"><i class="bi bi-arrow-right"> - </i>{{ source.name }}</a>
+{% endfor %}
+
