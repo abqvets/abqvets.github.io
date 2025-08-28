@@ -3,6 +3,7 @@ Build platform for Jekyll site @ abqvets.com
 
 
 ### 8/21/25
+- fixed discord linking issue
 - expansion of benefits categories
 - re-structring categories and interactivity (WIP Project)
 - finalizing move of all data to content server for redundancy and availability

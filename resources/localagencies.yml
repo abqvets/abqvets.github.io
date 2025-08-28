@@ -1,0 +1,47 @@
+- title: United Way 
+  url: www.unitedway.org
+  description: United is the Way we create lasting change. United Way brings communities together to find strength and share hope. It’s the way we rally in hard times to meet people’s needs so they can rise back up and build a better future.
+  image: https://www.unitedway.org/sites/default/files/styles/facebook/public/2025-03/B0013324.JPG?h=a66b2b92&itok=PK_M3ZFY
+  tags: local, financial assistance, homeless
+  category: local
+  categoryicon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: Salvation Army | Veteran Services
+  url: www.salvationarmyusa.org/usn/serve-veterans/
+  description: Our veterans have always fought for us. Now, during this global pandemic, it's our time to fight for them.
+  image: http://s3.amazonaws.com/usn-cache.salvationarmy.org/592d6faf-e7ee-463d-96cf-56ecf973119d_dtmg-hi-res.jpg
+  tags: local, financial assistance, homeless, housing, clothing
+  category: local
+  categoryicon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: Goodwill - Veteran Family Services
+  url: www.goodwillnm.org/veteran-family-services.html
+  description: Goodwill's Veteran Family Services program provides employment, job training and comprehensive case management to veterans and their family members.
+  image: https://www.goodwillnm.org/uploads/3/7/2/7/37279329/published/success-story-ssvf.jpg?1611870405
+  tags: local, financial assistance, homeless, housing, clothing. toprated
+  category: local
+  categoryicon:
+  contact:
+    email:
+    phone:
+    address:
+
+- title: New Mexico VIC | Veteran Integration Centers
+  url: www.nmvic.org
+  description: You can help the Veterans Integration Centers (VIC®) reach its goals of enabling Veterans and their families to achieve stable housing, financial security, and a renewed sense of community in Albuquerque, New Mexico and beyond. The Veterans Integration Center (VIC®) is a 501(c)(3) organization, and all donations are tax deductible.
+  image: https://static.wixstatic.com/media/08a1d5_d7fefe76930045d290339d6155eb9222~mv2.jpg/v1/fill/w_960,h_640,al_c/08a1d5_d7fefe76930045d290339d6155eb9222~mv2.jpg
+  tags: housing, financial assistance, recover, integration, mental health, clothing, food, toprated
+  category: local
+  categoryicon:
+  contact:
+    email:
+    phone:
+    address:
