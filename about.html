@@ -24,57 +24,153 @@
 <!-- start body -->
 
 <body> 
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark belize-bg bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="/assets/img/abqvets-white.svg" alt="ABQVets Logo" width="80" height="auto"
-                class="d-inline-block align-text-top">
-        </a>
-           <ul class="navbar-nav">
-            <!-- crisis line modal -->
-                <li class="nav-item btn btn-danger" data-bs-toggle="modal" data-bs-target="#CrisisModal">
-                    <i class="bi-asterisk"></i> Crisis?</li>
-            </ul>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+      <img src="/assets/img/abqvets-white.svg" alt="ABQVets Logo" width="55" height="auto"
+        class="d-inline-block align-text-top">
+      <div class="site-branding">
+        <strong class="mb-0">Vets Helping Vets</strong>
+        <small class="text-white-50">Albuquerque resource hub</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse"
+      aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavCollapse">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><i class="bi bi-house-door-fill me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Resources
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item" href="/#vaResources">VA Resources</a></li>
+            <li><a class="dropdown-item" href="/#mainAccordion">Resource Directory</a></li>
+            <li><a class="dropdown-item" href="/posts.html">News & Updates</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn btn-link text-white px-0" type="button" data-bs-toggle="modal" data-bs-target="#rrtpResidentModal">
+            RRTP Aftercare
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-1" href="https://discord.gg/4YwK8qCm">
+            <i class="bi bi-discord fs-5 text-info"></i>
+            Community
+            <span class="badge bg-danger text-white">NEW</span>
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 ms-lg-4">
+        <button class="btn btn-sm btn-danger crisis-btn d-none d-lg-inline-flex" data-bs-toggle="modal"
+          data-bs-target="#CrisisModal">
+          <i class="bi bi-asterisk me-1"></i>Crisis?
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li> -->
-                 <!-- <li class="nav-item "><a class="nav-link active" href="#home">Home</a></li> -->
-                <!--aftercare modal-->
-                <li class="nav-item nav-link active" type="button" data-bs-toggle="modal" data-bs-target="#rrtpResidentModal"><i
-                        class="bi-house-fill"></i> RRTP Aftercare</li>
-                <!--discord link-->
-                <li class="nav-item"><a class="nav-link active" href="https://discord.gg/4YwK8qCm"><i class="bi-discord" style="color:#7289DA;"></i> Community <span class="badge bg-danger text-white">NEW</span></a></li>
-                <li>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mailjetModal">
-                        Contact
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#mailjetModal">
+          Contact
+        </button>
+      </div>
+      <div class="d-lg-none w-100 mt-3">
+        <button class="btn btn-danger w-100 crisis-btn" data-bs-toggle="modal" data-bs-target="#CrisisModal">
+          Crisis? Call 988
+        </button>
+      </div>
     </div>
+  </div>
 </nav>
-<p>ABQVETS is an ever-evolving resource for us Veterans in Albuquerque, NM and beyond.</p>
 
-<p>Given the enormous amount of known (and unknown) resources available for Veterans, ABQVETS attempts to aggregate as many resources possible and make them easier to access and utilize.</p>
+<main class="pt-5 mt-5">
+  <section class="py-5 text-white text-center" style="background: radial-gradient(circle at top, rgba(255,255,255,.2), transparent 60%), #021024;">
+    <div class="container px-4">
+      <p class="text-uppercase text-white-50 small mb-2">Who we are</p>
+      <h1 class="display-6 fw-semibold mb-3">Helping vets reach the services they earned.</h1>
+      <p class="lead mx-auto mb-3" style="max-width: 680px;">ABQVETS is built to connect veterans with the resources that are otherwise buried behind confusing websites, broken listings, or paywalls. We walk through the internet maze so the not-so-savvy user can find help without the overwhelm.</p>
+      <p class="mb-0" style="max-width: 640px; margin: 0 auto;">Every link, hotline, and organization on this site has been hand-picked because it solves a real problem for someone who may not spend hours cataloguing benefits. We keep the tone direct, the navigation simple, and the updates frequent.</p>
+    </div>
+  </section>
 
-<p>ATTN: Vets
-Have an idea for the site that might help a fellow vet out? Tips, advice, resources, phone numbers, etc. Please <a href="mailto:mike@abqvets.com">Email Me</a> so we can spread the love. mike@abqvets.com.</p>
+  <section class="container py-5">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-semibold">Why we keep it simple</h2>
+        <p class="text-muted">Veterans deserve direct access, not jargon. We organize resources by need, use plain language, and spell out how to start a request, who to call, and what documentation matters.</p>
+        <ul class="list-unstyled ms-0">
+          <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Curated guides that match everyday questions (“Where do I send my VA claim?”).</li>
+          <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Local and national contacts so help stays close to home regardless of online ability.</li>
+          <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Step-by-step next actions for navigating healthcare, housing, jobs, and crisis support.</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 border rounded shadow-sm bg-white">
+          <h3 class="h5 mb-3 fw-semibold">Built for the not-so-savvy internet user</h3>
+          <p class="mb-3">No endless menus, no vague links. We mirror what someone would ask a buddy for — “Where is the quickest way to reset myVA password?” — then answer it in a short paragraph and a working link.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <span class="badge bg-primary text-white">Plain language</span>
+            <span class="badge bg-secondary text-white">Easy read layout</span>
+            <span class="badge bg-info text-dark">Always free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div> <!-- end of start tag -->
-<!-- footer -->
+  <section class="container pb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <article class="col">
+        <div class="p-4 h-100 border rounded text-center">
+          <div class="mb-3">
+            <i class="bi bi-geo-alt-fill fs-2 text-primary"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Local first</h3>
+          <p class="text-muted mb-0">We highlight Albuquerque-specific services alongside national hotlines so every visitor finds something relevant.</p>
+        </div>
+      </article>
+      <article class="col">
+        <div class="p-4 h-100 border rounded text-center">
+          <div class="mb-3">
+            <i class="bi bi-people-fill fs-2 text-primary"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Community driven</h3>
+          <p class="text-muted mb-0">Veterans and families share what worked, and we turn that feedback into updated resources within days.</p>
+        </div>
+      </article>
+      <article class="col">
+        <div class="p-4 h-100 border rounded text-center">
+          <div class="mb-3">
+            <i class="bi bi-lightning-charge-fill fs-2 text-primary"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Fast answers</h3>
+          <p class="text-muted mb-0">Crisis? Benefits? Housing? The pathways on this page lead to real help instead of scroll fatigue.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-
+  <section class="text-center px-4 pb-5">
+    <h2 class="fw-semibold mb-3">Need something not listed?</h2>
+    <p class="text-muted mb-3">We are constantly pulling in new tips, phone numbers, and programs. Drop us a note and we will map out the route for you.</p>
+    <div class="d-flex justify-content-center flex-wrap gap-2">
+      <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#mailjetModal">Contact</button>
+      <a class="btn btn-outline-secondary btn-lg" href="mailto:mike@abqvets.com">Email Mike</a>
+    </div>
+    <p class="small text-muted mt-3">Prefer phone calls? Use the Crisis? button in the header to see key hotlines instantly.</p>
+  </section>
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
      crossorigin="anonymous"></script>
-</p>
-
-
 
 
 

@@ -117,43 +117,51 @@ WhitesGrays:
     z-index: 2;
 }
 
- /* Animated Hamburger */
-    .navbar-toggler {
-      border: none;
-      outline: none;
-    }
-    .navbar-toggler-icon {
-      width: 25px;
-      height: 2px;
-      background-color: #fff;
-      display: block;
-      position: relative;
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-      content: "";
-      width: 25px;
-      height: 2px;
-      background-color: #fff;
-      position: absolute;
-      left: 0;
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar-toggler-icon::before {
-      top: -8px;
-    }
-    .navbar-toggler-icon::after {
-      top: 8px;
-    }
-    .navbar-toggler.collapsed .navbar-toggler-icon {
-      background-color: transparent;
-    }
-    .navbar-toggler.collapsed .navbar-toggler-icon::before {
-      /* transform: rotate(45deg); */
-      top: 0;
-    }
-    .navbar-toggler.collapsed .navbar-toggler-icon::after {
-      /* transform: rotate(-45deg); */
-      top: 0;
-    }
+/* Navbar */
+.custom-navbar {
+    background-image: linear-gradient(135deg, #0d3f7d, #0f284c);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.custom-navbar .navbar-brand {
+    min-width: 200px;
+}
+.custom-navbar .site-branding {
+    line-height: 1.1;
+}
+.custom-navbar .site-branding strong {
+    font-size: 1rem;
+}
+.custom-navbar .site-branding small {
+    font-size: 0.75rem;
+}
+.custom-navbar .navbar-nav {
+    gap: 0.35rem;
+}
+.custom-navbar .nav-link {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+.custom-navbar .nav-link.btn {
+    letter-spacing: normal;
+}
+.custom-navbar .dropdown-menu {
+    background-color: rgba(8, 12, 30, 0.95);
+    border: none;
+    min-width: 220px;
+}
+.custom-navbar .dropdown-item {
+    font-weight: 500;
+}
+.custom-navbar .navbar-toggler {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.custom-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+.crisis-btn {
+    white-space: nowrap;
+}
