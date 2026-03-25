@@ -1,0 +1,1999 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Local community updates, resources, and stories for veterans. We&#39;re built on a simple idea: veterans should not need a detective board and red string just to find support. If a resource exists, it should be visible, understandable, and one click away."
+/>
+<meta name="theme-color" content="#006266">
+<meta name="theme-color" content="#3867d6" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#3867d6" media="(prefers-color-scheme: light)">
+<title>Calendar</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="/assets/icon-BXoS623A.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon-16-BwoHyALP.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32-CBWULs6g.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192-DYa8etpF.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512-ChwcD8bb.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon-tALrBKG6.png">
+<link rel="mask-icon" href="/assets/icon-512-ChwcD8bb.png">
+<link rel="icon" href="/favicon.ico" sizes="32x32">    
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9397829862737407"
+     crossorigin="anonymous"></script>
+
+    <script type="module" crossorigin src="/assets/main-DUK7dRmW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-Bq6xBWHU.css">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+  <nav class="navbar navbar-expand-lg site-nav py-3" aria-label="Main navigation">
+  <div class="container">
+    <div class="d-flex align-items-center site-brand-search-group">
+      <a class="navbar-brand site-logo-wrap" href="/" aria-label="ABQ Vets home">
+        <img src="/assets/abqvets-white-C0U3V9ve.svg" alt="ABQ Vets" class="site-logo"/>
+      </a>
+      <div class="d-flex align-items-center ms-auto site-nav-controls">
+        <button
+          id="crisis-modal-btn-mobile"
+          class="btn crisis-btn fw-bold d-lg-none me-2"
+          data-bs-toggle="modal"
+          data-bs-target="#CrisisModal">Crisis</button>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="site-search-wrapper">
+      <div class="site-search-container">
+        <div class="input-group">
+          <input
+            type="search"
+            id="site-search-input"
+            class="form-control border-0 ps-3"
+            placeholder="Search..."
+            aria-label="Search site">
+          <button
+            class="btn btn-sm btn-outline-light border-0"
+            type="button"
+            id="search-icon-btn"
+            style="border-radius: 0 20px 20px 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007
+              1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+        </div>
+        <div
+          id="site-search-dropdown"
+          class="dropdown-menu position-absolute start-0 top-100 w-100 mt-2 shadow-lg"
+          style="min-width: 150px; max-width: 300px;">
+          <div id="site-search-results"></div>
+          <div class="dropdown-divider"></div>
+          <a id="site-search-page-link" href="/search/" class="dropdown-item text-center text-primary d-none">
+            View all results
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse order-4" id="mainNavbar">
+      <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-2 pt-3 pt-lg-0 text-center text-lg-start">
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="/search/">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resources/">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news/">News</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#ContactModal">
+            Contact
+          </a>
+        </li>
+        <li class="nav-item mt-2 mt-lg-0">
+          <button class="btn crisis-btn fw-bold d-none d-lg-inline-block" data-bs-toggle="modal" data-bs-target="#CrisisModal">
+          Crisis</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+    <main class="flex-grow-1 py-5">
+      
+      <div class="container">
+        
+<h1 class="mb-2 d-flex align-items-start gap-2">
+  <span>Calendar</span>
+  <span class="badge text-bg-danger align-self-start">beta</span>
+</h1>
+<p class="text-muted">
+  Combined events from VA (main), the Albuquerque VA, the NM DVS, and more to come :)
+  
+    Last refreshed: March 25, 2026 at 11:32 AM.
+  
+</p>
+
+
+  <div id="calendar-source-filter" class="mb-4 d-flex flex-wrap gap-2" role="group" aria-label="Filter events by source"></div>
+
+  
+    <h2 class="h4 mt-5 mb-3">March 2026</h2>
+    <div class="list-group shadow-sm">
+      
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 11, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Wed</div>
+                    <div class="fw-semibold">Mar 11</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    V.F.W. Post #3274 @ 609 W Alto Dr, Hobbs, NM 88240, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/lea-county-veterans-benefits-tax-exemption-event/" target="_blank" rel="noreferrer noopener">Lea County Veterans Benefits Tax Exemption Event</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Lea County Veterans! The New Mexico Department of Veterans’ Services (NMDVS) will be at V.F.W. Post #3274, 609 W. Alto Dr., Hobbs, NM 88240, from 9 am to 3 pm on Wednesday, March 11, 2026. State Benefits personnel will be ready to assist eligible Veterans and unmarried widows/widowers applying for property tax waivers, exemptions, and the NM State Park Lifetime Veteran Pass. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits. NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return. Widow/Widower copy of marriage and death certificates. Claim the benefits you have earned and join us for this free event. To find an office near you, call NMDVS at 1-866-433-8387 or visit https://www.nmdvs.org/</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Wed</div>
+                    <div class="fw-semibold">Mar 11</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Lovington Senior Citizen Center @ 18 W. Avenue F, Lovington, NM 88260
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-lovington/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Lovington</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at the Lovington Senior Citizen Center, 18 W. Avenue F, Lovington, NM 88260, on Wednesday, March 11, 2026, from 9:00 a.m. to 3:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 12, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 12</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Chaves County Administrative Center @ #1 St. Mary’s Pl. Suite 275, Roswell, NM 88203
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/chaves-county-veterans-benefits-tax-exemption-event/" target="_blank" rel="noreferrer noopener">Chaves County Veterans Benefits Tax Exemption Event</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Chaves County Veterans! Claim your Property Tax Exemption and Benefits on Thursday, March 12th! The New Mexico Department of Veterans’ Services (NMDVS) will be at the Chaves County Administrative Center, #1 St. Mary’s Pl. Suite 275, Roswell, NM 88203, from 9 am to 2 pm on Thursday, March 12, 2026. State Benefits personnel will be ready to assist eligible Veterans and unmarried widows/widowers applying for property tax waivers, exemptions, and the NM State Park Lifetime Veteran Pass. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits. NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return. Widow/Widower copy of marriage and death certificates. Claim the benefits you have earned and join us for this free event.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 12</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Ruidoso Convention Center @ 111 Sierra Blanca Dr, Ruidoso, NM 88345, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-ruidoso/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Ruidoso</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at the Ruidoso Convention Center, 111 Sierra Blanca Dr., Ruidoso, NM 88345, on Thursday, March 12, 2026, from 10:00 a.m. to 3:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 12</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      10:30 AM–11:00 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 2 #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 12</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      11:00 AM–11:30 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 1 *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 12</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      2:00 PM–3:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  NVGAG - 8ball Table Tennis #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 16, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Mon</div>
+                    <div class="fw-semibold">Mar 16</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      1:00 PM–1:30 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  SCI &amp; NVGAG Field *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Mon</div>
+                    <div class="fw-semibold">Mar 16</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      2:00 PM–3:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  NVGAG &amp; WCG Table Tennis #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 19, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 19</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Lordsburg City Hall Parking Lot @ 409 W Wabash St, Lordsburg, NM 88045, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-lordsburg/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Lordsburg</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at Lordsburg City Hall, 409 W. Wabash St., Lordsburg, NM, on Thursday, March 19, 2026, from 8:00 a.m. to 3:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 19</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Hidalgo County Clerk&#39;s Office @ 300 Shakespeare St. Lordsburg, NM 88045
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/hidalgo-county-veterans-property-tax-event/" target="_blank" rel="noreferrer noopener">Hidalgo County Veterans Property Tax Event</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Hidalgo County Veterans! Claim your Property Tax Exemption and Benefits on Thursday, March 19th! The New Mexico Department of Veterans’ Services (NMDVS) will be at the Hidalgo County Clerk’s Office, 300 Shakespeare St., Lordsburg, NM 88045, from 9 am to 3 pm on Thursday, March 19, 2026. State Benefits personnel will be ready to assist eligible Veterans and unmarried widows/widowers applying for property tax waivers, exemptions, and the NM State Park Lifetime Veteran Pass. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits. NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return. Widow/Widower copy of marriage and death certificates. Claim the benefits you have earned and join us for this free event.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 19</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      2:00 PM–3:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  NVGAG - Boccia #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 20, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Fri</div>
+                    <div class="fw-semibold">Mar 20</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Luna County Courthouse Parking Lot @ 700 S. Silver Ave., Deming, NM 88030
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-deming/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Deming</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be in front of the Luna County Courthouse, 700 S. Silver Ave., Deming, NM 88030, on Friday, March 20, 2026, from 9:00 a.m. to 2:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 23, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Mon</div>
+                    <div class="fw-semibold">Mar 23</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      1:00 PM–2:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  SCI Power Soccer *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 24, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Tue</div>
+                    <div class="fw-semibold">Mar 24</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      10:30 AM–11:00 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 2 #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Tue</div>
+                    <div class="fw-semibold">Mar 24</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      11:00 AM–11:30 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 1 *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 25, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Wed</div>
+                    <div class="fw-semibold">Mar 25</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      9:30 AM–10:30 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  All Bikes Ride **
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 26, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 26</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Santa Fe Community College @ 6401 Richards Ave., Santa Fe, NM 87508
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/santa-fe-veterans-benifits-event/" target="_blank" rel="noreferrer noopener">Santa Fe Veterans Benifits Event</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Santa Fe Veterans! The New Mexico Department of Veterans’ Services (NMDVS) will be at Santa Fe Community College, 6401 Richards Ave., Santa Fe, NM 87508, on Thursday, March 26th, from 9:00 AM – 3:00 PM. NMDVS is here to support Veterans and eligible unmarried widows or widowers with a wide range of services. Our staff can assist with applying for property tax waivers and exemptions, obtaining the New Mexico State Parks Lifetime Veteran Pass, filing for VA benefits and compensation claims, and answering questions about VA healthcare eligibility and enrollment. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates. Claim the benefits you have earned and join us for this free event. To find an office near you, call NMDVS at 1-866-433-8387 or visit https://www.nmdvs.org</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 26</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      10:30 AM–11:00 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 2 #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 26</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      11:00 AM–11:30 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 1 *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Mar 26</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      2:00 PM–3:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  NVGAG - Horseshoes #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 30, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Mon</div>
+                    <div class="fw-semibold">Mar 30</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      2:00 PM–3:00 PM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  NVGAG &amp; WCG Table Tennis #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">March 31, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Tue</div>
+                    <div class="fw-semibold">Mar 31</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      10:30 AM–11:00 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 2 #
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="va_rec_calender"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Tue</div>
+                    <div class="fw-semibold">Mar 31</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      11:00 AM–11:30 AM
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="va_rec_calender">
+                    ABQ VA Recreation Calendar
+                  </span>
+                
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  Tai Chi 1 *
+                
+              </h3>
+
+              
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  
+    <h2 class="h4 mt-5 mb-3">April 2026</h2>
+    <div class="list-group shadow-sm">
+      
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 1, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Wed</div>
+                    <div class="fw-semibold">Apr 1</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Hatch Library/Senior Center @ 522 E Hall St, Hatch, NM 87937, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-hatch/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Hatch</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Mobile Outreach Vehicle in Hatch, NM, Wednesday, April 1, 2026! The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at the Hatch Library/Senior Center, 522 E. Hall St, Hatch, NM 87937, on Wednesday, April 1, 2026, from 10:00 a.m. to 5:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 2, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Apr 2</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    V.F.W. Post 1389 @ 1305 NM 195, Elphant Butte, NM 87935
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-elephant-butte/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Elephant Butte</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Mobile Outreach Vehicle in Elephant Butte, NM, Thursday, April 2, 2026! The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at V.F.W. Post 1389, 1305 NM 195, Elephant Butte, NM 87935 on Thursday, April 2, 2026, from 9:00 a.m. to 2:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 9, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Apr 9</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Chama Senior Center @ 2449 Hwy 64/84, Chama, NM 87520
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/mobile-outreach-vehicle-in-chama/" target="_blank" rel="noreferrer noopener">Mobile Outreach Vehicle in Chama</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) Mobile Outreach Vehicle will be at the Chama Senior Center, 2449 Hwy 64/84, Chama, NM 87520, on Thursday, April 9, 2026, from 10:00 a.m. to 2:00 p.m. Veterans can meet one-on-one with a Veteran Service Officer for assistance with VA and New Mexico State benefit applications. Our team will also provide guidance on healthcare, compensation, pensions, education benefits, and state programs and services available to veterans and their families. Documents needed to verify eligibility: A copy of DD-214, NA 13038, NOAA Form 56-16, or PHS Form 1867 VA Award Letter showing the percentage of disability and any other VA correspondence related to claiming benefits NM Driver’s License, ID, voter registration card, or the most recent NM Personal Income Tax Return Widow/Widower copy of marriage and death certificates This is an opportunity to ask questions, receive information, and get help claiming the benefits you have earned.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Thu</div>
+                    <div class="fw-semibold">Apr 9</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Bataan Memorial Building, Eternal Flame @ Bataan Memorial Building, 407 Galisteo St, Santa Fe, NM 87501, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/annual-bataan-remembrance-ceremony-april-9th/" target="_blank" rel="noreferrer noopener">Annual Bataan Remembrance Ceremony April 9th</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Each year on April 9th, New Mexicans gather to honor one of the most significant chapters in the state’s military history during the Bataan Remembrance Ceremony, presented by the New Mexico National Guard in partnership with the New Mexico Department of Veterans’ Services. The ceremony commemorates the 1,800 soldiers of the New Mexico National Guard’s 200th and 515th Coast Artillery Regiments stationed in the Philippines on Dec. 8, 1941, when Japan launched a surprise attack just hours after Pearl Harbor. Originally deployed for training, these New Mexicans soon became part of a combined American and Filipino force defending the Bataan Peninsula against Japanese invasion. After four months of intense fighting, Allied forces, outnumbered and running out of food and supplies, surrendered on April 9, 1942. Thousands of American and Filipino troops were taken prisoner and subjected to the brutal Bataan Death March. The ceremony will take place before the eternal flame at the Bataan Memorial Building on Thursday, April 9th, at 11:00 am, 407 Galisteo Street, Santa Fe, NM 87501 .</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 15, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Wed</div>
+                    <div class="fw-semibold">Apr 15</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    VFW Post 8703 @ 1916 San Jose Blvd. Carlsbad, NM 88220
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/women-veterans-program-meet-and-greet-in-carlsbad/" target="_blank" rel="noreferrer noopener">Women Veterans Program Meet and Greet in Carlsbad</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Join us for a Women Veterans Program Meet and Greet in Carlsbad! The New Mexico Department of Veterans Services invites women veterans to a networking event designed to strengthen communication and connection within our community. Guests will receive a brief program overview, followed by an opportunity for open discussion and questions. Your feedback and perspectives are invaluable in guiding future initiatives and advancing our mission to serve the Women Veterans population in New Mexico. : Wednesday, April 15th, 2026 From 5 pm to 7 pm VFW Post 8703, 1916 San Jose Blvd. Carlsbad, NM 88220 For more information or assistance, please contact the Women Veterans Program Manager at 505-372-9106 or Amberly.Viner@dvs.nm.gov. We look forward to connecting and working together to strengthen services and support for all New Mexico veterans and the families who stand beside them.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 17, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Fri</div>
+                    <div class="fw-semibold">Apr 17</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Hotel Encanto de Las Cruces @ 705 S. Telshor Blvd., Las Cruces, NM 88011
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/nmdvs-annual-veterans-conference-in-las-cruces/" target="_blank" rel="noreferrer noopener">NMDVS Annual Veterans Conference in Las Cruces</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">The New Mexico Department of Veterans’ Services (NMDVS) will host its annual 2026 Veterans Conference on April 17th–18th at Hotel Encanto de Las Cruces in Las Cruces, 705 S. Telshor Blvd., Las Cruces, NM 88011, bringing together Veterans, families, service providers, and advocates from across the state. This year’s theme, “Empowering Every Veteran, Enriching Every Community,” highlights the strong partnership between New Mexico’s Veteran community and the many organizations dedicated to serving those who have worn the uniform. The two-day conference will feature program briefings from state, federal, and community partners who support Veterans, along with updates on available services, resources, and state and federal benefits. Attendees will have opportunities to connect directly with Veteran-friendly organizations and learn more about programs designed to assist Veterans and their families. Veterans will have the opportunity to meet directly with NMDVS staff and service providers to get help with benefits applications and claims questions. Support will be available for property tax waivers and exemptions, obtaining the New Mexico State Parks Lifetime Veteran Pass, filing VA benefits and compensation claims, and answering questions about VA health care eligibility and enrollment. Participants are encouraged to bring a copy of their DD-214 (if applicable), their VA award letter, and any VA correspondence related to benefits to help streamline the process. The conference will take place on Friday, April 17, from 8:00 a.m. to 4:15 p.m ., and Saturday, April 18, from 8:00 a.m. to 12:30 p.m. Registration is free and open to Veterans and their families, but space is limited to 205 participants. For conference registration, click here or scan the QR code.</p>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+          
+          <div class="list-group-item bg-light">
+            <div class="d-flex align-items-center gap-2">
+              <span class="fw-semibold">April 24, 2026</span>
+            </div>
+          </div>
+        
+
+        
+        
+
+        <article
+          class="list-group-item list-group-item-action"
+          data-source-id="nmdvs"
+        >
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-sm-auto">
+              <div class="calendar-when">
+                <div class="d-flex align-items-start justify-content-between d-sm-block">
+                  <div>
+                    <div class="text-uppercase text-muted small">Fri</div>
+                    <div class="fw-semibold">Apr 24</div>
+                  </div>
+                  <div class="small text-muted text-end text-sm-center mt-sm-1">
+                    
+                      All day
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-wrap gap-2 align-items-center mb-1">
+                
+                  <span class="badge text-bg-secondary" data-source-badge="nmdvs">
+                    NM Department of Veterans&#39; Services
+                  </span>
+                
+                
+                  <span class="badge text-bg-light border text-dark">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Sonoma Ranch Golf Course @ 1274 Golf Club Rd, Las Cruces, NM 88011, USA
+                  </span>
+                
+              </div>
+
+              <h3 class="h6 mb-1">
+                
+                  <a href="https://www.nmdvs.org/event/military-honors-spring-training-conference-competition-2/" target="_blank" rel="noreferrer noopener">Military Honors Spring Training Conference &amp; Competition</a>
+                
+              </h3>
+
+              
+                <p class="small text-muted mb-0 mt-2">Honor Guard volunteers from across New Mexico are invited to attend the 17th Annual Military Honors Training Conference and Competition on Friday, April 24, 2026, at Sonoma Ranch Golf Course in Las Cruces. Hosted in partnership with the New Mexico Department of Veterans’ Services and the New Mexico National Guard, this biannual training strengthens the skills and precision required to render military funeral honors with dignity and professionalism. Participants will receive hands-on instruction from military funeral honors experts, take part in demonstrations and breakout sessions, and compete in team evaluations that include flag folding, presentation, sounding of Taps, and rifle volleys. NMDVS supports more than 30 all-volunteer Honor Guard teams across the state who provide final honors for veterans and ensure no one is laid to rest without the recognition they have earned. This training continues a longstanding commitment to uphold the highest standards of military funeral honors while honoring the service and sacrifice of New Mexico’s veterans. For more information about all-volunteer Honor Guards, contact Alex Saiz at alexander.saiz@dvs.nm.gov or (505) 487-6740. 4.24 Honor Guard Conference Spring Flyer 2026.pdf Final (004)</p>
+              
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("calendar-source-filter");
+      const items = document.querySelectorAll("[data-source-id]");
+      if (!container || !items.length) return;
+
+      const sources = new Map();
+      items.forEach((el) => {
+        const id = (el.dataset.sourceId || "").trim();
+        if (!id) return;
+        const badge = el.querySelector(`[data-source-badge="${id}"]`);
+        const label = badge ? badge.textContent.trim() : id;
+        if (!sources.has(id)) sources.set(id, label);
+      });
+
+      const buttons = [];
+      const setActive = (button) => {
+        buttons.forEach((btn) => {
+          btn.classList.remove("btn-primary");
+          btn.classList.add("btn-outline-primary");
+          btn.setAttribute("aria-pressed", "false");
+        });
+        button.classList.remove("btn-outline-primary");
+        button.classList.add("btn-primary");
+        button.setAttribute("aria-pressed", "true");
+      };
+
+      const applyFilter = (sourceId, button) => {
+        items.forEach((el) => {
+          const id = (el.dataset.sourceId || "").trim();
+          const match = sourceId === "all" || id === sourceId;
+          el.style.display = match ? "" : "none";
+        });
+
+        // Hide empty day headers
+        document.querySelectorAll(".list-group-item.bg-light").forEach((header) => {
+          let next = header.nextElementSibling;
+          let anyVisible = false;
+          while (next && !next.classList.contains("bg-light")) {
+            if (next.style.display !== "none") {
+              anyVisible = true;
+              break;
+            }
+            next = next.nextElementSibling;
+          }
+          header.style.display = anyVisible ? "" : "none";
+        });
+
+        setActive(button);
+      };
+
+      const createButton = (label, value) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "btn btn-outline-primary btn-sm";
+        button.textContent = label;
+        button.addEventListener("click", () => applyFilter(value, button));
+        container.appendChild(button);
+        buttons.push(button);
+        return button;
+      };
+
+      const allButton = createButton("All", "all");
+      sources.forEach((label, id) => createButton(label, id));
+      applyFilter("all", allButton);
+    });
+  </script>
+
+
+      </div>
+      
+    </main>
+
+    <footer class="site-footer py-4 mt-auto">
+  <div class="container text-center">
+    <nav aria-label="Footer navigation" class="mb-3">
+      <a class="footer-link mx-2" href="/community/">Community</a>
+      <a class="footer-link mx-2" href="/contact/">Contact</a>
+      <a class="footer-link mx-2" href="/about/">About</a>
+    </nav>
+    <p class="mb-0 small">
+      Made with <i class="bi bi-heart-fill" style="color: #dfe6e9;"></i> by a veteran, for veterans. Copyright
+      <span id="copyright-year"></span>. All right reserved
+    </p>
+  </div>
+</footer>
+
+
+    <div class="modal fade" id="CrisisModal" tabindex="-1" aria-labelledby="CrisisModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body text-center p-5">
+        <div class="mb-4">
+          <i class="bi bi-asterisk text-danger display-1" aria-hidden="true"></i>
+        </div>
+
+        <h1 class="text-danger fw-bold mb-2" id="CrisisModalLabel">Crisis?</h1>
+        <h4 class="text-dark mb-3">The Veteran's Crisis Line is here for you.</h4>
+        <p class="text-muted fs-5 mb-4">Call, text, or chat - you're not alone.</p>
+
+        <div class="d-grid gap-3 d-sm-flex justify-content-center">
+          <a href="tel:988" class="btn btn-danger btn-lg rounded-pill shadow-sm">
+            <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i> Call
+          </a>
+          <a href="sms:838255" class="btn btn-outline-danger btn-lg rounded-pill shadow-sm">
+            <i class="bi bi-chat-left-dots-fill me-2" aria-hidden="true"></i> Text
+          </a>
+          <a href="https://chat.988lifeline.org" class="btn btn-outline-danger btn-lg rounded-pill shadow-sm">
+            <i class="bi bi-chat-fill me-2" aria-hidden="true"></i> Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 rounded-4 shadow">
+      <div class="modal-header border-0 px-4 pt-4">
+        <div>
+          <h3 class="modal-title text-center" id="ContactModalLabel">Holler At Us...</h3>
+          
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <p class="lead mb-3">We are here for you. Use the secure form below to describe your needs.</p>
+        <div class="contact-modal-form">
+          <iframe
+            data-w-type="embedded"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://snhn5.mjt.lu/wgt/snhn5/0h47/form?c=ada12401"
+            width="100%"
+            style="height: 0; min-height: 400px;"
+          ></iframe>
+          <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v2.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
