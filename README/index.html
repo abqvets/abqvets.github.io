@@ -1,0 +1,527 @@
+<h1>ABQVets 11ty Source Directory</h1>
+<p>This directory contains the source files for the ABQVets website, built with <strong>Eleventy (11ty) v3</strong>.</p>
+<h2>🏗 Project Architecture</h2>
+<ul>
+<li><strong>Templating:</strong> Nunjucks (<code>.njk</code>) for layouts and logic, Markdown (<code>.md</code>) for content.</li>
+<li><strong>Styling:</strong> Sass (<code>.scss</code>) located in <code>assets/scss/</code>, compiled to <code>assets/css/main.css</code>.</li>
+<li><strong>UI Framework:</strong> Bootstrap 5 (CSS via Sass, JS via CDN in <code>base_layout.njk</code>).</li>
+<li><strong>Build Tooling:</strong> Standalone Node.js scripts and Eleventy (Vite has been removed for simplicity).</li>
+</ul>
+<h2>📂 Directory Structure</h2>
+<ul>
+<li><code>_data/</code>: Global data files (YAML/JSON/JS).
+<ul>
+<li><code>master_resources.yaml</code>: The primary database of veteran resources.</li>
+<li><code>featured.yaml</code>: Controls the rotating featured card on the homepage.</li>
+<li><code>calendar.js</code>: Dynamically processes external calendar events.</li>
+</ul>
+</li>
+<li><code>_includes/</code>:
+<ul>
+<li><code>layouts/</code>: Core page templates (<code>base_layout.njk</code>, <code>post.njk</code>, etc.).</li>
+<li><code>partials/</code>: Reusable components like the navbar, footer, and modals.</li>
+</ul>
+</li>
+<li><code>assets/</code>: Static assets (images, icons, compiled CSS, and client-side JS).</li>
+<li><code>posts/</code>: Automatically generated articles (scraped/converted to Markdown).</li>
+<li><code>resources/</code>: contains the resource detail template and manual resource pages.</li>
+</ul>
+<h2>🚀 Build Process</h2>
+<p>The project uses a custom build orchestrator located in <code>scripts/build.js</code>.</p>
+<h3>Commands</h3>
+<ul>
+<li><code>npm run build</code>: Performs a full production build:
+<ol>
+<li>Fetches/generates calendar events.</li>
+<li>Compiles Sass to CSS.</li>
+<li>Parses input URLs for resource previews.</li>
+<li>Runs the Eleventy build.</li>
+<li>Generates the Pagefind search index.</li>
+<li>Syncs the result to the production folder.</li>
+</ol>
+</li>
+<li><code>npm run dev</code>: Serves the already built files from the production directory using Eleventy's built-in server.</li>
+<li><code>npm run css:build</code>: Manually triggers the Sass compiler.</li>
+</ul>
+<h2>⚙️ Key Features</h2>
+<h3>Resource Preview Plugin</h3>
+<p>The site uses a custom plugin (<code>config/eleventy-resource-preview-plugin.js</code>) that monitors <code>src/_data/input_urls.yaml</code>. It automatically fetches metadata (titles, descriptions, images) for these URLs and populates <code>src/_data/master_resources.yaml</code>.</p>
+<h3>Featured Card Rotation</h3>
+<p>The homepage hero section features a rotating card. It pulls entries from <code>src/_data/featured.yaml</code> and cycles through them every 8 seconds using a lightweight inline script.</p>
+<h3>Search</h3>
+<p>Search functionality is powered by <strong>Pagefind</strong>, which runs post-build to index the static HTML and provide fast, client-side search results.</p>
+<h2>🌐 Production Output</h2>
+<p>By default, the build process outputs the final site to <code>../abqvets-production</code>. This allows the source code and the live production files to exist in separate, clean environments.</p>
+<h3>8/21/25</h3>
+<ul>
+<li>fixed discord linking issue</li>
+<li>expansion of benefits categories</li>
+<li>re-structring categories and interactivity (WIP Project)</li>
+<li>finalizing move of all data to content server for redundancy and availability</li>
+<li></li>
+</ul>
+<h3>8/19/25</h3>
+<ul>
+<li>security patches</li>
+</ul>
+<h3></h3>
+<ul>
+<li></li>
+</ul>
+<h3>Old Build Logs (pre-migration)</h3>
+<table>
+<thead>
+<tr>
+<th>70ab8ad</th>
+<th>miguel</th>
+<th>Mon, 16 Jun 2025 21:14:18 -0600</th>
+<th>update nav</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>55aa452</td>
+<td>miguel</td>
+<td>Mon, 16 Jun 2025 21:03:42 -0600</td>
+<td>updated crisis functions</td>
+</tr>
+<tr>
+<td>6ced1b1</td>
+<td>miguel</td>
+<td>Thu, 5 Jun 2025 13:51:51 -0600</td>
+<td>added new tools breathing and leaves</td>
+</tr>
+<tr>
+<td>a189220</td>
+<td>miguel</td>
+<td>Fri, 30 May 2025 15:25:03 -0600</td>
+<td>streamlined systems</td>
+</tr>
+<tr>
+<td>fb02eb0</td>
+<td>miguel</td>
+<td>Fri, 30 May 2025 14:29:20 -0600</td>
+<td>cleanup and trimmed</td>
+</tr>
+<tr>
+<td>191f732</td>
+<td>miguel</td>
+<td>Fri, 30 May 2025 13:57:43 -0600</td>
+<td>cleanup</td>
+</tr>
+<tr>
+<td>4e7076f</td>
+<td>miguel</td>
+<td>Fri, 30 May 2025 13:55:37 -0600</td>
+<td>temporary push</td>
+</tr>
+<tr>
+<td>1404e41</td>
+<td>miguel</td>
+<td>Fri, 30 May 2025 13:25:48 -0600</td>
+<td>breathing app</td>
+</tr>
+<tr>
+<td>1f7ae66</td>
+<td>miguel</td>
+<td>Thu, 29 May 2025 23:47:14 -0600</td>
+<td>tweaks and automation setups</td>
+</tr>
+<tr>
+<td>4afe250</td>
+<td>miguel</td>
+<td>Thu, 29 May 2025 21:17:35 -0600</td>
+<td>complete update</td>
+</tr>
+<tr>
+<td>ad37f1a</td>
+<td>miguel</td>
+<td>Thu, 29 May 2025 20:45:32 -0600</td>
+<td>complete re-structure</td>
+</tr>
+<tr>
+<td>21cbc16</td>
+<td>miguel</td>
+<td>Thu, 29 May 2025 11:24:06 -0600</td>
+<td>uploads integrated</td>
+</tr>
+<tr>
+<td>8df7d76</td>
+<td>miguel</td>
+<td>Wed, 28 May 2025 14:42:52 -0600</td>
+<td>changed nav and modals</td>
+</tr>
+<tr>
+<td>7ef1efc</td>
+<td>miguel</td>
+<td>Wed, 28 May 2025 14:32:30 -0600</td>
+<td>integrated discord updated nav</td>
+</tr>
+<tr>
+<td>37a4461</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 12:06:35 -0600</td>
+<td>fixed alignment and grammar</td>
+</tr>
+<tr>
+<td>3a2626f</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:53:03 -0600</td>
+<td>tweaks to flow</td>
+</tr>
+<tr>
+<td>f04826c</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:51:37 -0600</td>
+<td>ds</td>
+</tr>
+<tr>
+<td>08c044f</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:50:26 -0600</td>
+<td>tweaks on form</td>
+</tr>
+<tr>
+<td>6a8e729</td>
+<td>Mike</td>
+<td>Tue, 27 May 2025 00:24:08 -0600</td>
+<td>Create CNAME</td>
+</tr>
+<tr>
+<td>0fdbf9d</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:22:19 -0600</td>
+<td>fixed redirects</td>
+</tr>
+<tr>
+<td>4388f1d</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:12:14 -0600</td>
+<td>flush and refresh of all files</td>
+</tr>
+<tr>
+<td>986b32f</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:07:37 -0600</td>
+<td>fixed ac directory</td>
+</tr>
+<tr>
+<td>95fded8</td>
+<td>miguel</td>
+<td>Tue, 27 May 2025 00:04:26 -0600</td>
+<td>major revamp - see changelog</td>
+</tr>
+<tr>
+<td>d15db02</td>
+<td>miguel</td>
+<td>Sun, 25 May 2025 23:17:42 -0600</td>
+<td>major cosmetic changes. Addition of Dr. Y section and styling</td>
+</tr>
+<tr>
+<td>c9f1322</td>
+<td>miguel</td>
+<td>Sun, 25 May 2025 23:11:40 -0600</td>
+<td>modifications</td>
+</tr>
+<tr>
+<td>e9592a5</td>
+<td>Mike</td>
+<td>Sun, 6 Apr 2025 20:04:49 -0600</td>
+<td>Create b00f896c6229ce120555c57d09a560f4.txt</td>
+</tr>
+<tr>
+<td>ed09099</td>
+<td>miguel</td>
+<td>Wed, 2 Apr 2025 22:16:05 -0600</td>
+<td>add print to calendar</td>
+</tr>
+<tr>
+<td>3e9afff</td>
+<td>miguel</td>
+<td>Wed, 2 Apr 2025 21:31:52 -0600</td>
+<td>added calendar and some tweaks</td>
+</tr>
+<tr>
+<td>3d86be2</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 21:23:08 -0600</td>
+<td>link preview 30% implemented</td>
+</tr>
+<tr>
+<td>8425d6e</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 14:02:54 -0600</td>
+<td>fixed linking issues</td>
+</tr>
+<tr>
+<td>88495e1</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 13:44:43 -0600</td>
+<td>click to call functions</td>
+</tr>
+<tr>
+<td>4f5384b</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 13:40:28 -0600</td>
+<td>major changes to styling</td>
+</tr>
+<tr>
+<td>d19ba2a</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 12:33:27 -0600</td>
+<td>crisis number</td>
+</tr>
+<tr>
+<td>6ca53cb</td>
+<td>miguel</td>
+<td>Mon, 24 Mar 2025 10:04:58 -0600</td>
+<td>fixes</td>
+</tr>
+<tr>
+<td>f38d87e</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 17:39:31 -0600</td>
+<td>cleaned up files</td>
+</tr>
+<tr>
+<td>e5a1214</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 17:35:57 -0600</td>
+<td>cleaned up files</td>
+</tr>
+<tr>
+<td>81ba5a7</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 17:29:26 -0600</td>
+<td>tweaks</td>
+</tr>
+<tr>
+<td>d4644e6</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 17:27:45 -0600</td>
+<td>fixing CNAME issues</td>
+</tr>
+<tr>
+<td>87a9013</td>
+<td>Mike</td>
+<td>Sun, 23 Mar 2025 17:24:45 -0600</td>
+<td>Create CNAME</td>
+</tr>
+<tr>
+<td>574d16c</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 17:07:31 -0600</td>
+<td>updated menu</td>
+</tr>
+<tr>
+<td>dd4c50c</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 15:53:57 -0600</td>
+<td>fixes for viewPoint</td>
+</tr>
+<tr>
+<td>477e4c8</td>
+<td>Mike</td>
+<td>Sun, 23 Mar 2025 15:42:44 -0600</td>
+<td>Create CNAME</td>
+</tr>
+<tr>
+<td>efa4438</td>
+<td>miguel</td>
+<td>Sun, 23 Mar 2025 15:12:03 -0600</td>
+<td>overhaul of css styling and routing of .com domain</td>
+</tr>
+<tr>
+<td>1b3b826</td>
+<td>Mike</td>
+<td>Fri, 21 Mar 2025 11:43:29 -0600</td>
+<td>Create CNAME</td>
+</tr>
+<tr>
+<td>bd6edb1</td>
+<td>mike-hmg</td>
+<td>Thu, 26 Sep 2024 22:57:17 -0600</td>
+<td>added some goodies</td>
+</tr>
+<tr>
+<td>85151c5</td>
+<td>mike-hmg</td>
+<td>Thu, 26 Sep 2024 19:01:38 -0600</td>
+<td>few tweaks and added new section</td>
+</tr>
+<tr>
+<td>d7cbeff</td>
+<td>mike-hmg</td>
+<td>Tue, 24 Sep 2024 23:30:01 -0600</td>
+<td>implemented jekyll</td>
+</tr>
+<tr>
+<td>04b985d</td>
+<td>Mike</td>
+<td>Thu, 19 Sep 2024 08:44:38 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>d60e930</td>
+<td>Mike</td>
+<td>Thu, 19 Sep 2024 08:44:19 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>f2a9657</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 22:13:52 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>186318a</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 22:12:57 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>282e4bf</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 22:08:27 -0600</td>
+<td>Add files via upload</td>
+</tr>
+<tr>
+<td>b59750c</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 22:06:17 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>4c3bb8a</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 22:04:21 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>3bdcc3f</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 20:10:14 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>62e21dc</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 19:46:02 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>4aaebcf</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 17:46:15 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>5bb9f83</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 17:41:55 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>4cdc7da</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 17:38:44 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>3d21cb8</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 17:34:12 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>25ee361</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 17:25:36 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>020a9b2</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:48:24 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>9f1123b</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:46:42 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>63a45f5</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:44:16 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>f168d4e</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:43:24 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>d263312</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:41:33 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>7be6568</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:40:34 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>f9ffa4d</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:39:27 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>b913149</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:38:15 -0600</td>
+<td>Update index.html</td>
+</tr>
+<tr>
+<td>036921d</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:34:55 -0600</td>
+<td>Create index.html</td>
+</tr>
+<tr>
+<td>37bb6b0</td>
+<td>Mike</td>
+<td>Wed, 18 Sep 2024 16:01:15 -0600</td>
+<td>README.md</td>
+</tr>
+<tr>
+<td>f45b65c</td>
+<td>Mike</td>
+<td>Sat, 14 Sep 2024 16:33:43 -0600</td>
+<td>Update README.md</td>
+</tr>
+<tr>
+<td>a8e25c9</td>
+<td>Mike</td>
+<td>Sat, 14 Sep 2024 02:24:25 -0600</td>
+<td>Update README.md</td>
+</tr>
+<tr>
+<td>e80e36e</td>
+<td>Mike</td>
+<td>Sat, 14 Sep 2024 02:22:56 -0600</td>
+<td>Update README.md</td>
+</tr>
+<tr>
+<td>4cd25b4</td>
+<td>Mike</td>
+<td>Sat, 14 Sep 2024 02:21:35 -0600</td>
+<td>Initial commit</td>
+</tr>
+</tbody>
+</table>

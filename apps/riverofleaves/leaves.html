@@ -1,0 +1,368 @@
+---
+title: Just Let it Flow
+date: 2026-03-16
+tags: 
+  - therapy
+  - relax
+--- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#a3d5ff" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+<title>Floating Tree Leaves with Thought Bubbles</title>
+<style>
+  /* Basic page & container setup */
+  body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #a3d5ff, #74b9ff);
+  }
+
+  .river {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Leaf container styles */
+  .leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    pointer-events: auto;
+    will-change: transform, left, top;
+  }
+
+  /* Make SVG fill inherit from current color */
+  .leaf svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Thought bubble styles */
+  .thought-bubble {
+    position: absolute;
+    bottom: 100%;           /* place just above the leaf */
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 40px;
+    height: 30px;
+    padding: 6px 12px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #888;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    opacity: 0;             /* start transparent */
+    animation: fadeIn 0.5s ease forwards; /* fade in animation */
+    text-align: center;
+    font-size: 0.65rem;
+    line-height: 1.3;
+    color: #222;
+    white-space: nowrap;
+    pointer-events: none;   /* so it doesn't block clicks */
+  }
+
+  /* Thought bubble "tail" circles */
+  .thought-bubble::before,
+  .thought-bubble::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border: 2px solid #888;
+    border-radius: 50%;
+  }
+
+  .thought-bubble::before {
+    width: 10px;
+    height: 10px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .thought-bubble::after {
+    width: 6px;
+    height: 6px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Fade in keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  .input-overlay {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(640px, calc(100% - 32px));
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 12;
+  }
+
+  .input-overlay input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+  }
+
+  .input-overlay input::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .feedback-up {
+    background: #2ecc71;
+  }
+
+  .feedback-down {
+    background: #e74c3c;
+  }
+</style>
+</head>
+<body>
+  <!-- Container for the floating leaves -->
+  <div class="river" id="river"></div>
+  <form class="input-overlay" id="leafForm">
+    <input id="leafMessage" type="text" placeholder="Share a floating thought..." autocomplete="off" />
+    <div class="action-buttons">
+      <button class="action-btn feedback-up" id="thumbsUpBtn" type="button" aria-label="Send positive thought">
+        <i class="bi bi-hand-thumbs-up-fill"></i>
+      </button>
+      <button class="action-btn feedback-down" id="thumbsDownBtn" type="button" aria-label="Send critical thought">
+        <i class="bi bi-hand-thumbs-down-fill"></i>
+      </button>
+    </div>
+  </form>
+
+<script>
+  const river = document.getElementById('river');
+  const feedbackInput = document.getElementById('leafMessage');
+  const thumbsUpBtn = document.getElementById('thumbsUpBtn');
+  const thumbsDownBtn = document.getElementById('thumbsDownBtn');
+  const leafForm = document.getElementById('leafForm');
+
+  // Colors for leaves (these drive the SVG fill via currentColor)
+//   const leafColors = ['#f4e7a1', '#c0392b', '#bfa179'];
+  // fall colors: orange, yellow, and brown
+  const leafColors = ['#d35400', '#f39c12', '#f1c40f', '#a04000', '#8b4513'];
+
+  // Inline SVG markup for the leaf shape so animation works when opening the file locally
+  const leafSVG = `<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 114.8"><defs><style>.cls-1{fill:currentColor;fill-rule:evenodd;}</style></defs><title>leaf-fit</title><path class="cls-1" d="M8.22,23.43C3.7,16.43,1.13,8.06,0,0A64.84,64.84,0,0,1,23.33,8l-.26-5.15c5.72.83,13.18,4.23,21.86,9.41l0-4.92A56.62,56.62,0,0,1,62.29,18.17l1.92-4.08q8,4.18,16.51,14.63l2-4.27c4.48,3.62,8.21,8.92,10.87,16.69l3-3c2.56,3.51,4.55,9,5.63,17.63l3.94-2.16c.88,4.78-.36,11.68-2.63,19.6l4.6-.19c-2.14,7.46-5.12,13.89-9.52,18.62,6.25,6.16,14.57,11.17,24.2,15.47-.25,3.48-1.47,6-3.61,7.74-11-7.52-21.52-15.63-31.72-24Q74.4,79.57,62.17,67.71A485,485,0,0,1,21.6,23.58Q16,16.61,10.67,9.42c.2,3.05,10.24,17.37,17.37,26.29C46.68,59.09,68.46,79.57,90.32,99.84c-5.71,4.68-11.47,7.41-17.3,8.06v-4.29c-7,2.34-13.79,4-19.57,2.42l2.21-4a38.67,38.67,0,0,1-17.84-5.25L41,93.32c-6.79-2-12.52-5.27-16.38-10.72l4.15-1.94C23,76,17.35,71.19,14.11,64.21l4.22-2C13.23,56.28,9.21,50.5,7.54,45.06l5.05-.21C7.42,36.85,4,29.48,3,22.94l5.24.49Z"/></svg>`;
+
+  // Function to create and animate a single leaf
+  function createLeaf(options = {}) {
+    try {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('leaf');
+
+      // Pick a random color and assign to wrapper (for currentColor in SVG)
+      const color = options.color ?? leafColors[Math.floor(Math.random() * leafColors.length)];
+      wrapper.style.color = color;
+
+      // Inline the leaf SVG template so it can color via currentColor
+      const temp = document.createElement('div');
+      temp.innerHTML = leafSVG;
+      const svg = temp.querySelector('svg');
+      if (!svg) return; // Fail gracefully if SVG doesn't load
+
+      // Ensure SVG fills the wrapper area
+      svg.style.width = '100%';
+      svg.style.height = '100%';
+
+      wrapper.appendChild(svg);
+
+      // Initial position; we will animate with translate3d for smooth GPU rendering
+      wrapper.style.left = '0';
+      wrapper.style.top = '0';
+
+      // Random initial rotation angle and scale for size variety
+      const scale = Math.random() * 0.5 + 0.75; // 0.75x to 1.25x size
+      let rotation = Math.random() * 360;
+
+      // Apply initial transform
+      wrapper.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+
+      // Animation state variables
+      let posX = -50; // starting x (left)
+      const riverHeight = river.clientHeight || window.innerHeight;
+      const lowerBound = 10;
+      const upperBound = Math.max(40, riverHeight - 60);
+      const baseY = Math.random() * (upperBound - lowerBound) + lowerBound;
+      const speedMultiplier = options.speedMultiplier ?? 1;
+      let speed = (Math.random() * 0.25 + 0.08) * 1.1 * speedMultiplier; // horizontal speed (px per frame at 60fps)
+      const floatDir = Math.random() < 0.5 ? -1 : 1; // float sway direction
+      let clicked = false;
+
+      // Sway offset for unique sine wave start points
+      const swayOffset = Math.random() * 1000;
+
+      // Optional random spin speed for rotation animation
+      const spinSpeed = (Math.random() * 0.4 + 0.1);
+      let lastTimestamp;
+
+      // Animate loop for this leaf
+      const floatAmplitude = Math.random() * 6 + 4;
+      const floatFrequency = Math.random() * 0.0015 + 0.0008;
+      function animate(timestamp) {
+        if (!lastTimestamp) lastTimestamp = timestamp;
+        const deltaFrames = (timestamp - lastTimestamp) / 16.666;
+        lastTimestamp = timestamp;
+
+        posX += speed * deltaFrames;
+
+        // Horizontal sway using sine wave
+        const sway = Math.sin((timestamp + swayOffset) / 800) * 12;
+
+        // Smooth vertical bobbing tied to timestamp (no accumulation)
+        const floatOffset = Math.sin((timestamp + swayOffset) * floatFrequency) * floatAmplitude * floatDir;
+
+        // Increment rotation angle for slow spin
+        rotation += spinSpeed * deltaFrames;
+
+        // Apply combined transform for GPU-accelerated animation
+        wrapper.style.transform = `translate3d(${posX + sway}px, ${baseY + floatOffset}px, 0) rotate(${rotation}deg) scale(${scale})`;
+
+        // Remove leaf if it floats past right edge of screen
+        if (posX > window.innerWidth + 60) {
+          river.removeChild(wrapper);
+          return;
+        }
+        requestAnimationFrame(animate);
+      }
+
+      // Function to add the thought bubble above the leaf
+      function addThoughtBubble(text, bubbleColor, textColor) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('thought-bubble');
+        if (bubbleColor) {
+          bubble.style.background = bubbleColor;
+          bubble.style.borderColor = bubbleColor;
+          bubble.style.color = textColor ?? '#fff';
+        } else {
+          bubble.style.color = textColor ?? '#222';
+        }
+        if (text) {
+          bubble.textContent = text;
+        }
+        wrapper.appendChild(bubble);
+      }
+
+      if (options.bubbleText) {
+        addThoughtBubble(options.bubbleText, options.bubbleColor, options.bubbleTextColor);
+      }
+
+      // Click and touch event handlers for leaf
+      wrapper.addEventListener('click', () => {
+        if (!clicked) {
+          speed *= 4;        // speed up leaf
+          addThoughtBubble(); // show thought bubble
+          clicked = true;     // prevent multiple clicks
+        }
+      });
+
+      wrapper.addEventListener('touchstart', () => {
+        if (!clicked) {
+          speed *= 4;
+          addThoughtBubble();
+          clicked = true;
+        }
+      });
+
+      // Add the leaf to the river container and start animating
+      river.appendChild(wrapper);
+      requestAnimationFrame(animate);
+
+    } catch (e) {
+      console.error('Error loading leaf SVG:', e);
+    }
+  }
+
+  // Create leaves repeatedly up to a max count
+  setInterval(() => {
+    if (document.querySelectorAll('.leaf').length < 20) {
+      createLeaf();
+    }
+  }, 2000);
+
+  // Initial batch of leaves for quick start
+  for (let i = 0; i < 5; i++) {
+    setTimeout(createLeaf, i * 1000);
+  }
+
+  function spawnFeedbackLeaf(inputText, color, speedMultiplier) {
+    const trimmed = inputText.trim();
+    if (!trimmed) return;
+    createLeaf({
+      color,
+      bubbleText: trimmed,
+      bubbleColor: color,
+      bubbleTextColor: '#fff',
+      speedMultiplier,
+    });
+    feedbackInput.value = '';
+    feedbackInput.focus();
+  }
+
+  thumbsUpBtn.addEventListener('click', () => {
+    spawnFeedbackLeaf(feedbackInput.value, '#2ecc71', 1.4);
+  });
+
+  thumbsDownBtn.addEventListener('click', () => {
+    spawnFeedbackLeaf(feedbackInput.value, '#e74c3c', 1.6);
+  });
+
+  leafForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    spawnFeedbackLeaf(feedbackInput.value, '#2ecc71', 1.4);
+  });
+</script>
+</body>
+</html>
