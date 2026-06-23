@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Breath PWA</title>
+
+<link rel="manifest" id="manifest-placeholder">
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #06162c;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: white;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+    background: #2f80ed;
+    border-radius: 50%;
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(47,128,237,0.25);
+    transition: transform 0.05s linear;
+  }
+
+  .label {
+    position: absolute;
+    top: 65%;
+    font-size: 20px;
+    letter-spacing: 3px;
+    opacity: 0.85;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 10px;
+  }
+
+  button {
+    background: #2f80ed;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  button.active {
+    background: #4aa3ff;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="circle" id="circle"></div>
+<div class="label" id="label">BREATH</div>
+
+<div class="controls">
+  <button id="audioBtn">Audio: OFF</button>
+  <button id="vibeBtn">Vibrate: OFF</button>
+</div>
+
+<script>
+/* -----------------------------
+   PWA MANIFEST (inline)
+----------------------------- */
+const manifest = {
+  name: "Breath PWA",
+  short_name: "Breath",
+  start_url: ".",
+  display: "standalone",
+  background_color: "#06162c",
+  theme_color: "#2f80ed",
+  icons: []
+};
+
+const blob = new Blob([JSON.stringify(manifest)], {type: "application/json"});
+document.getElementById("manifest-placeholder").href = URL.createObjectURL(blob);
+
+/* -----------------------------
+   BREATH ENGINE
+----------------------------- */
+
+const circle = document.getElementById("circle");
+const label = document.getElementById("label");
+
+let start = null;
+const CYCLE = 14;
+
+// toggles
+let audioOn = false;
+let vibeOn = false;
+
+document.getElementById("audioBtn").onclick = (e) => {
+  audioOn = !audioOn;
+  e.target.textContent = "Audio: " + (audioOn ? "ON" : "OFF");
+};
+
+document.getElementById("vibeBtn").onclick = (e) => {
+  vibeOn = !vibeOn;
+  e.target.textContent = "Vibrate: " + (vibeOn ? "ON" : "OFF");
+};
+
+// soft oscillator for breath cue
+let audioCtx;
+function beep(freq, time) {
+  if (!audioOn) return;
+
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.frequency.value = freq;
+  gain.gain.value = 0.03;
+
+  osc.start();
+  osc.stop(audioCtx.currentTime + time);
+}
+
+// breathing curve (physiological)
+function breathCurve(x) {
+  if (x < 0.28) {
+    return Math.pow(x / 0.28, 1.6); // inhale
+  } else {
+    return Math.pow(1 - (x - 0.28) / 0.72, 2.2); // exhale
+  }
+}
+
+let lastPhase = null;
+
+function animate(ts) {
+  if (!start) start = ts;
+
+  const elapsed = (ts - start) / 1000;
+  const t = (elapsed % CYCLE) / CYCLE;
+
+  const b = breathCurve(t);
+
+  const scale = 1 + (0.8 * b);
+
+  circle.style.transform = `scale(${scale})`;
+
+  const glow = 20 + (1 - b) * 35;
+  circle.style.boxShadow = `0 0 ${glow}px rgba(47,128,237,0.3)`;
+
+  const phase = t < 0.28 ? "IN" : "OUT";
+  label.textContent = phase;
+
+  // trigger cues on phase change
+  if (phase !== lastPhase) {
+    lastPhase = phase;
+
+    if (phase === "IN") {
+      beep(220, 0.08);
+      if (vibeOn && navigator.vibrate) navigator.vibrate(20);
+    } else {
+      beep(140, 0.12);
+      if (vibeOn && navigator.vibrate) navigator.vibrate(40);
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+</script>
+
+</body>
+</html>
